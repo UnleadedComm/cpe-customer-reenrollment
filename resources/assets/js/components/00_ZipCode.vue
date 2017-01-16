@@ -35,6 +35,7 @@
                             <!--<span v-show="verify.$dirty && verify.service_zip.required" class="error control-label" >Your 5-digit ZIP code is required.</span>-->
                             <!--<span v-show="verify.service_zip.minLength" class="error control-label" >Must be 5 characters.</span>-->
                             <span v-show="NoService" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the account number and ZIP code provided.</span>
+                            <span v-show="NotResidential" class="error text-danger control-label">Please contact a service representative. 888.200.3788</span>
                         </div>
 
                         <div class="form-group" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.service_zip.$valid }">
@@ -83,6 +84,7 @@
                                 <input v-model="meter_number" maxlength="25" type="text" class="form-control" id="meter_number" name="meter_number" placeholder="">
                                 <span v-show="NoMeterProvided" class="error text-danger control-label">Please provide a valid meter number.</span>
                                 <span v-show="NoMeter" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the meter number you provided.</span>
+                                <span v-show="NotResidential" class="error text-danger control-label">Please contact a service representative. 888.200.3788</span>
 
                             </div>
                         </div>
@@ -143,17 +145,31 @@
 
                     if(!_.isEmpty(results)){
 
-                        console.log(results);
-                        console.log(results.length);
+                        if(results.segment == 'Residential') {
 
-                        _self.$store.commit('updateCustomer', results);
+                            console.log(results);
+                            console.log(results.length);
 
-                        setTimeout(function(){
+                            _self.$store.commit('updateCustomer', results);
+
+                            setTimeout(function () {
+                                _self.appLoading(false);
+                                _self.$router.push({path: '/reenroll/account/information'});
+
+                            }, 1000);
+
+                        } else {
+
+                            setTimeout(function(){
+
+                                $('.same-height').matchHeight();
+
+                            }, 100);
+
                             _self.appLoading(false);
-                            _self.$router.push({path: '/reenroll/account/information'});
+                            this.NotResidential = true;
 
-                        }, 1000);
-
+                        }
 
                     } else {
 
@@ -172,6 +188,12 @@
                         if(result.errors.RuntimeError){
                             _self.MeterNumberRequired = true;
                             _self.appLoading(false);
+
+                            setTimeout(function(){
+                                $('html, body').animate({
+                                    scrollTop: $(".meter-number-note").offset().top
+                                }, 1000);
+                            }, 100);
                         }
 
 
@@ -200,14 +222,27 @@
 
                         if(!_.isEmpty(results)){
 
-                            _self.$store.commit('updateCustomer', results);
+                            if(results.segment == 'Residential') {
+                                _self.$store.commit('updateCustomer', results);
 
-                            setTimeout(function(){
+                                setTimeout(function () {
+                                    _self.appLoading(false);
+                                    _self.$router.push({path: '/reenroll/account/information'});
+
+                                }, 1000);
+
+                            } else {
+
+                                setTimeout(function(){
+
+                                    $('.same-height').matchHeight();
+
+                                }, 100);
+
                                 _self.appLoading(false);
-                                _self.$router.push({path: '/reenroll/account/information'});
+                                this.NotResidential = true;
 
-                            }, 1000);
-
+                            }
 
                         } else {
 
@@ -267,7 +302,8 @@
                 NoService: false,
                 NoMeter: false,
                 MeterNumberRequired: false,
-                NoMeterProvided: false
+                NoMeterProvided: false,
+                NotResidential: false
             }
         },
         watch: {

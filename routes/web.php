@@ -23,7 +23,7 @@ Auth::routes();
 
 /* Proxy for Vue JS */
 Route::get('/reenroll/utilities/{id}/legal_terms', 'HomeController@GetLegalTerms');
-Route::get('/reenroll/products/{id}', 'HomeController@CustomerProducts');
+Route::get('/reenroll/products/{zip}/{segment}/{utility_id}', 'HomeController@CustomerProducts'); 
 Route::get('/reenroll/{zip}/{account_number}', 'HomeController@ValidateCustomer');
 Route::get('/reenroll/{zip}/{account_number}/{meter_number}', 'HomeController@ValidateMeter');
 Route::post('/reenroll/complete', 'HomeController@Enrollment'); 

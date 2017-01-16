@@ -175,7 +175,7 @@
                         var ContactsAttributes = {email: this.email, phone: this.phone};
                         this.$store.commit('updateContactsAttributes', ContactsAttributes);
 
-                        Vue.http.get('/reenroll/products/' + this.customer.id).then((response) => {
+                        Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id).then((response) => {
 
                             var results = response.json();
 

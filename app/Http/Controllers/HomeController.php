@@ -126,15 +126,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function CustomerProducts($id)
+    public function CustomerProducts($id, $zip, $segment, $utility_id)
     {
 
         try {
 
+            if($segment == "Residential"){
+                $segment = "R";
+            } else {
+                $segment = "SCOM";
+            }
+
             //CPE Choice API Call
             $client = new \GuzzleHttp\Client(['headers' => ['Authorization' => 'Token token='.env('APP_CPE_API_TOKEN')], 'base_uri' => env('APP_CPE_API_URL')]);
-            $response = $client->request('GET', 'customers/'.$id.'/products');
-            $statuscode = $response->getStatusCode();
+            $response = $client->request('GET', 'utilities/'.$utility_id.'/products', ['http_errors' => false, 'query' => ['zip'=>$zip, 'customer'=>'renewal', 'segment' => $segment]]);
+            $statuscode = $response->getStatusCode(); 
 
 
             $content = \GuzzleHttp\json_decode($response->getBody()->getContents());
