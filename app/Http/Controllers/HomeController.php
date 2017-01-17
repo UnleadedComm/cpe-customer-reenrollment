@@ -126,7 +126,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function CustomerProducts($id, $zip, $segment, $utility_id)
+    public function CustomerProducts($zip, $segment, $utility_id)
     {
 
         try {

@@ -35,7 +35,7 @@
                             <!--<span v-show="verify.$dirty && verify.service_zip.required" class="error control-label" >Your 5-digit ZIP code is required.</span>-->
                             <!--<span v-show="verify.service_zip.minLength" class="error control-label" >Must be 5 characters.</span>-->
                             <span v-show="NoService" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the account number and ZIP code provided.</span>
-                            <span v-show="NotResidential" class="error text-danger control-label">Please contact a service representative. 888.200.3788</span>
+                            <span v-show="NotResidential" class="error text-danger control-label">This account cannot be re-enrolled online at this time.  Please contact a service representative toll-free at <b>1-888-200-3788</b>.</span>
                         </div>
 
                         <div class="form-group" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.service_zip.$valid }">
@@ -84,7 +84,7 @@
                                 <input v-model="meter_number" maxlength="25" type="text" class="form-control" id="meter_number" name="meter_number" placeholder="">
                                 <span v-show="NoMeterProvided" class="error text-danger control-label">Please provide a valid meter number.</span>
                                 <span v-show="NoMeter" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the meter number you provided.</span>
-                                <span v-show="NotResidential" class="error text-danger control-label">Please contact a service representative. 888.200.3788</span>
+                                <span v-show="NotResidential" class="error text-danger control-label">This account cannot be re-enrolled online at this time.  Please contact a service representative toll-free at <b>1-888-200-3788</b>.</span>
 
                             </div>
                         </div>
@@ -145,7 +145,7 @@
 
                     if(!_.isEmpty(results)){
 
-                        if(results.segment == 'Residential') {
+                        if(results[0].segment == 'Residential') {
 
                             console.log(results);
                             console.log(results.length);
@@ -222,7 +222,7 @@
 
                         if(!_.isEmpty(results)){
 
-                            if(results.segment == 'Residential') {
+                            if(results[0].segment == 'Residential') {
                                 _self.$store.commit('updateCustomer', results);
 
                                 setTimeout(function () {
