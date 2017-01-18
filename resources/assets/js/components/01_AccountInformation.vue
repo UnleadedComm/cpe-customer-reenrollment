@@ -13,7 +13,7 @@
 
             <div class="col-md-9">
                 <h4 class="margin-top-0 font-size-20">ACCOUNT INFORMATION</h4>
-                <p class="font-size-14">Please verify the service information for this account. A valid phone number and email are required to complete online re-enrollment. If any information is incorrect, please call customer care at 888-207-3788 to complete your re-enrollment.</p>
+                <p class="font-size-14">Please verify the service information for this account. A valid phone number and email are required to complete online re-enrollment. If any information is incorrect, please call customer care at 888-200-3788 to complete your re-enrollment.</p>
             </div>
 
             <div class="col-md-1 pull-right text-right">
