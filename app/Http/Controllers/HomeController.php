@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function __construct()
     {
         if (App::environment('staging')) {
-            $this->middleware('auth');
+            //$this->middleware('auth');
 
         }
     }

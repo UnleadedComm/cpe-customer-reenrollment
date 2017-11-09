@@ -205,6 +205,87 @@
 
 
             },
+            validateFromRetail(){
+
+                this.verify.$dirty = true;
+
+                this.NoService = false;
+
+                if(this.verify.$valid){
+
+                    var _self = this;
+                    _self.appLoading(true);
+
+
+                    this.account_number = this.account_number.trim();
+
+                    Vue.http.get('/reenroll/' + this.service_zip + '/' + this.account_number).then((response) => {
+
+                        var results = response.json();
+
+
+                        if(!_.isEmpty(results)){
+
+                            if(results[0].segment == 'Residential') {
+
+                                console.log(results);
+                                console.log(results.length);
+
+                                _self.$store.commit('updateCustomer', results);
+
+                                setTimeout(function () {
+                                    _self.appLoading(false);
+                                    _self.$router.push({path: '/reenroll/account/information'});
+
+                                }, 1000);
+
+                            } else {
+
+                                setTimeout(function(){
+
+                                    $('.same-height').matchHeight();
+
+                                }, 100);
+
+                                _self.appLoading(false);
+                                this.NotResidential = true;
+
+                            }
+
+                        } else {
+
+                            _self.appLoading(false);
+                            this.NoService = true;
+
+                        }
+
+
+
+                    }, (response) => {
+                        console.log('error: ');
+                        console.log(response.json());
+                        var result = response.json();
+
+                        if(result.errors.RuntimeError){
+                            _self.MeterNumberRequired = true;
+                            _self.appLoading(false);
+
+                            setTimeout(function(){
+                                $('html, body').animate({
+                                    scrollTop: $(".meter-number-note").offset().top
+                                }, 1000);
+                            }, 100);
+                        }
+
+
+                    });
+
+
+                }//END if
+
+
+
+            },
             validateMeterNumber(){
 
                 var _self = this;
@@ -330,6 +411,17 @@
         },
         mounted: function(){
             this.loaded = true;
+
+            if(this.$route.params.zip) {
+                this.service_zip = this.$route.params.zip;
+                this.account_number = this.$route.params.account;
+
+                var _self = this;
+                setTimeout(function(){
+                    _self.validateFromRetail();
+                }, 1000);
+            }
+
 
         }
 

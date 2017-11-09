@@ -18,6 +18,7 @@ const store = require('./store.js');
 const routes = [
     { path: '/', redirect: '/reenroll' },
     { path: '/reenroll', component: Enroll },
+    { path: '/retail/:zip/:account', component: Enroll },
     { path: '/reenroll/account/information', component: AccountInformation },
     { path: '/reenroll/offers', component: Offers },
     { path: '/reenroll/review', component: Review },
