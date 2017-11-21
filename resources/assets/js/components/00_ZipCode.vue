@@ -50,6 +50,7 @@
 
                         <div class="row form-group margin-top-40 margin-bottom-40">
                             <div class="col-md-12">
+                                <button style="margin-bottom: 20px;" v-show="NoService" v-on:click="goHome" type="button" class="btn btn-primary btn-cpe large center-block">Home <i class="fa fa-angle-left fa-2x pull-left" aria-hidden="true"></i></button>
                                 <button v-show="!isAppLoading && !MeterNumberRequired" type="submit" class="btn btn-primary btn-cpe large center-block">Next <i class="fa fa-angle-right fa-2x pull-right" aria-hidden="true"></i></button>
                                 <button v-show="isAppLoading" type="button" class="btn btn-primary btn-cpe large center-block">Loading <i class="fa fa-circle-o-notch fa-spin pull-right" aria-hidden="true"></i></button>
                             </div>
@@ -124,6 +125,9 @@
     export default {
         name: 'ZIP-Code',
         methods: {
+            goHome() {
+              window.location.href = 'http://dev.centerpointenergyretail.com';
+            },
             validate(e){
 
                 this.verify.$dirty = true;
