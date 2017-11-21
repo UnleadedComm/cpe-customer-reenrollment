@@ -67,7 +67,7 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="http://www.centerpointenergyretail.com">
                 {{--{{ config('app.name', 'Laravel') }}--}}
                 <img src="images/logo.jpg">
             </a>
@@ -132,7 +132,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 pull-left">
-                <p><small>Copyright © 2016 CenterPoint Energy</small></p>
+                <p><small>Copyright © 2017 CenterPoint Energy</small></p>
             </div>
             <div class="col-lg-3 pull-right">
                 <a target="_blank" href="http://www.centerpointenergy.com/en-us/corporate/legal/privacy-policy">Privacy</a>
