@@ -141,7 +141,7 @@
 
             <!-- About Offers -->
             <div class="row plan-overviews">
-                <div class="col col-md-3 text-center">
+                <div class="col col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Fixed.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">FIXED RATE</h4>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 text-center">
+                <div class="col col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Managed.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">MANAGED RATE</h4>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 text-center">
+                <div class="col col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Index.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">INDEX RATE</h4>
@@ -172,15 +172,6 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 text-center">
-                    <div class="overview">
-                        <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Variable.png"></i>
-                        <h4 class="margin-top-0 font-size-20 margin-top-10">VARIABLE RATE</h4>
-                        <!--<p class="font-size-14 margin-bottom-5 font-weight-600">Mauris viverra dolor ipsum</p>-->
-                        <p class="font-size-12">Our Variable Price plan gives you ultimate flexibility. Your rate may adjust monthly and you have the freedom of no contract. No long-term commitments. No cancellation fees. No strings attached.</p>
-                        <!--<button class="btn btn-primary btn-cpe margin-top-10">Learn More</button>-->
-                    </div>
-                </div>
 
             </div>
             <!-- END -->
