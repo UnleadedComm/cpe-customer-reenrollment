@@ -258,6 +258,8 @@
 
                         } else {
 
+                            this.account_number = '';
+                            this.service_zip = '';
                             _self.appLoading(false);
                             this.NoService = true;
 
