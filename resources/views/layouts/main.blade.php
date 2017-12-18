@@ -88,7 +88,30 @@
                 @elseif (Auth::guest() && App::environment('production'))
                     <li><a href="http://www.centerpointenergyretail.com">HOME</a></li>
                     <li><a href="http://www.centerpointenergyretail.com/about">ABOUT US</a></li>
-                    <li><a href="http://www.centerpointenergyretail.com/news">NEWS</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            AREAS WE SERVE <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="http://www.centerpointenergyretail.com/signup">
+                                    California
+                                </a>
+                                <a href="http://www.centerpointenergyretail.com/signup">
+                                    Michigan
+                                </a>
+                                <a href="http://www.centerpointenergyretail.com/nebraska">
+                                    Nebraska
+                                </a>
+                                <a href="http://www.centerpointenergyretail.com/signup">
+                                    Ohio
+                                </a>
+                                <a href="http://www.centerpointenergyretail.com/wyoming">
+                                    Wyoming
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="http://www.centerpointenergyretail.com/contact">CONTACT US</a></li>
                 @else
                     <li class="dropdown">
