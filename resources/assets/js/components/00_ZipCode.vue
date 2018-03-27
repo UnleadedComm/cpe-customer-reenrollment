@@ -149,7 +149,7 @@
 
                     if(!_.isEmpty(results)){
 
-                        if(results[0].segment == 'Residential') {
+                        if(results[0].segment == 'Residential' || results[0].segment == 'Small Commercial') {
 
                             console.log(results);
                             console.log(results.length);
@@ -161,17 +161,6 @@
                                 _self.$router.push({path: '/reenroll/account/information'});
 
                             }, 1000);
-
-                        } else {
-
-                            setTimeout(function(){
-
-                                $('.same-height').matchHeight();
-
-                            }, 100);
-
-                            _self.appLoading(false);
-                            this.NotResidential = true;
 
                         }
 
