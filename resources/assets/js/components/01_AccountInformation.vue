@@ -57,6 +57,25 @@
                     </div>
 
                     <div class="row">
+                        <div class="col-md-6" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.first_name.$valid }">
+                            <div class="form-group">
+                                <label for="service_street">Contact First Name*</label>
+                                <input v-model="first_name" type="text" class="form-control" id="first_name" name="first_name" placeholder="" >
+                                <p v-show="verify.$dirty && verify.first_name.required" class="text-danger control-label margin-top-10" >Your contact first name is required.</p>
+                                <p v-show="verify.$dirty && verify.first_name.blank" class="text-danger control-label margin-top-10" >Your contact first name is required.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.last_name.$valid }">
+                            <div class="form-group">
+                                <label for="service_street">Contact Last Name*</label>
+                                <input v-model="last_name" type="text" class="form-control" id="last_name" name="last_name" placeholder="" >
+                                <p v-show="verify.$dirty && verify.last_name.required" class="text-danger control-label margin-top-10" >Your contact last name is required.</p>
+                                <p v-show="verify.$dirty && verify.last_name.blank" class="text-danger control-label margin-top-10" >Your contact last name is required.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="service_street">Service Street Address*</label>
@@ -150,7 +169,7 @@
                 if(this.selected_offer_id != null){
                     var _self = this;0
                     _self.appLoading(true);
-                    var ContactsAttributes = {email: this.email, phone: this.phone};
+                    var ContactsAttributes = {first_name: this.first_name, last_name: this.last_name, email: this.email, phone: this.phone};
                     this.$store.commit('updateContactsAttributes', ContactsAttributes);
 
                     setTimeout(function () {
@@ -172,7 +191,7 @@
                         _self.appLoading(true);
                         e.preventDefault();
 
-                        var ContactsAttributes = {email: this.email, phone: this.phone};
+                        var ContactsAttributes = {first_name: this.first_name, last_name: this.last_name, email: this.email, phone: this.phone};
                         this.$store.commit('updateContactsAttributes', ContactsAttributes);
 
                         Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id).then((response) => {
@@ -225,6 +244,8 @@
                     service_zip: '',
                     url: ''
                 },
+                first_name: '',
+                last_name: '',
                 phone: '',
                 email: '',
                 selected_offer_id: null,
@@ -255,6 +276,14 @@
                     required: true,
                     blank: true,
                     phone: true
+                },
+                first_name: {
+                    required: true,
+                    blank: true
+                },
+                last_name: {
+                    required: true,
+                    blank: true
                 }
             };
 

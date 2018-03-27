@@ -118,6 +118,8 @@
                 <div class="col-md-6">
                     <p><label>Customer Type: </label> {{ customer.segment }} </p>
                     <p><label>Account Name: </label> {{ customer.account_name }}</p>
+                    <p><label>Contact First Name: </label> {{ enrollment.contacts_attributes[0].first_name }}</p>
+                    <p><label>Contact Last Name: </label> {{ enrollment.contacts_attributes[0].last_name }}</p>
                     <p><label>Account Number: </label> {{ customer.account_number }}</p>
                     <p v-if="customer.meter_number"><label>Meter Number: </label> {{ customer.meter_number }}</p>
                 </div>

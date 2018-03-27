@@ -134,12 +134,12 @@ class HomeController extends Controller
             if($segment == "Residential"){
                 $segment = "R";
             } else {
-                $segment = "SCOM";
+                $segment = "S";
             }
 
             //CPE Choice API Call
             $client = new \GuzzleHttp\Client(['headers' => ['Authorization' => 'Token token='.env('APP_CPE_API_TOKEN')], 'base_uri' => env('APP_CPE_API_URL')]);
-            $response = $client->request('GET', 'utilities/'.$utility_id.'/products', ['http_errors' => false, 'query' => ['zip'=>$zip, 'customer'=>'renewal', 'segment' => $segment]]);
+            $response = $client->request('GET', 'utilities/'.$utility_id.'/products', ['http_errors' => false, 'query' => ['zip'=>$zip, 'customer'=>'existing', 'segment' => $segment]]);
             $statuscode = $response->getStatusCode(); 
 
 
@@ -227,7 +227,7 @@ class HomeController extends Controller
             $results = \GuzzleHttp\json_decode($response->getBody()->getContents());
 
             if(App::environment('staging')) {
-                Log::info("Enrollment Complete " . "(" . Auth::user()->name . " - " . Auth::user()->email . "): ", (array)$results);
+                //Log::info("Enrollment Complete " . "(" . Auth::user()->name . " - " . Auth::user()->email . "): ", (array)$results);
             }
 
             $responsecode = 200;

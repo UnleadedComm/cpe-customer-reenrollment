@@ -13,6 +13,8 @@ export default new Vuex.Store({
             "signedup_at": "",
             "account_number": "",
             "contacts_attributes": [{
+                "first_name": "",
+                "last_name": "",
                 "email": "",
                 "phone": ""
             }],

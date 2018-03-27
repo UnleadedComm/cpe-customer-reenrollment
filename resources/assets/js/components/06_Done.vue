@@ -70,7 +70,9 @@
                                 <p><label>Customer Type: </label> {{ offer.segment }}</p>
                                 <p><label>Account Name: </label> {{ completed_enrollment.service_locations[0].account_name }}</p>
                                 <p><label>Account Number: </label> {{ completed_enrollment.service_locations[0].account_number }}</p>
-                                <p v-if="completed_enrollment.service_locations[0].meter_number"><label>Meter Number: </label> {{ completed_enrollment.service_locations[0].meter_number }}</p> 
+                                <p><label>Contact First Name: </label> {{ completed_enrollment.contacts[0].first_name }}</p>
+                                <p><label>Contact Last Name: </label> {{ completed_enrollment.contacts[0].last_name }}</p>
+                                <p v-if="completed_enrollment.service_locations[0].meter_number"><label>Meter Number: </label> {{ completed_enrollment.service_locations[0].meter_number }}</p>
                             </div>
                             <!-- END -->
 
