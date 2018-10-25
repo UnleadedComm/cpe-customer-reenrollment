@@ -126,7 +126,7 @@
         name: 'ZIP-Code',
         methods: {
             goHome() {
-              window.location.href = 'http://dev.centerpointenergyretail.com';
+              window.location.href = 'http://www.centerpointenergyretail.com';
             },
             validate(e){
 
