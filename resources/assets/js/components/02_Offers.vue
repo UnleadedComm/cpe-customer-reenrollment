@@ -2,20 +2,20 @@
 
         <div class="container enrollment offers">
             <!-- Offer Heading -->
-            <div class="row margin-bottom-10 heading">
-                <div class="col-md-1 text-center">
+            <div class="row justify-content-center margin-bottom-10 heading">
+                <div class="col-md-2 col-lg-1 text-center">
 
                     <i class="fa fa-gas fa-3x cpe rounded" aria-hidden="true"></i>
 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-7">
                     <h4 class="margin-top-20 font-size-20">AVAILABLE PLANS</h4>
                     <!--<p class="font-size-14">Enrolling is fast and easy.  Get started by choosing a plan below.-->
                         <!--Remember to have your utility account number available.</p>-->
                 </div>
 
-                <div class="col-md-4 pull-right text-right">
+                <div class="col-md-4 pull-right text-right text-md-right">
                     <p class="text-uppercase font-size-12 font-weight-300 orange">OFFERS FOR ACCOUNT NUMBER: <span class="black display-block font-weight-600">{{ customer.account_number }}</span></p>
                     <p class="font-size-12 font-weight-600"><a href="http://www.centerpointenergyretail.com/contact">Need Help?</a></p>
                 </div>
@@ -42,9 +42,9 @@
                         <template  v-for="(offer, index) in offers">
                             <!-- Offer -->
                             <tr v-bind:class="isOddEven(index)">
-                                <td class="text-left one">
-                                    <div class="row vertical-align">
-                                            <i class="fa fa-4x col-sm-12 col-md-3 col-md-offset-1 offer-icon" aria-hidden="true"><img v-bind:src="'http://cpedev2.centerpointenergyretail.com/images/offer_' + offer.price_type + '.png'"></i>
+                                <td class="one">
+                                    <div class="row justify-content-center vertical-align text-lg-center">
+                                            <i class="fa fa-4x col-sm-12 col-md-5 offer-icon" aria-hidden="true"><img v-bind:src="'http://cpedev2.centerpointenergyretail.com/images/offer_' + offer.price_type + '.png'"></i>
 
                                             <div class="col-sm-12 col-md-8">
                                                 <h5 class="font-size-14 margin-top-0 margin-bottom-5 font-weight-600">{{ offer.name }}</h5>
@@ -125,7 +125,7 @@
 
             <!-- Offer Heading -->
             <div class="row margin-bottom-10 heading">
-                <div class="col-md-1 text-center">
+                <div class="mb-4 col-md-2 col-lg-1 mr-lg-4 mr-xl-3 text-center">
 
                     <i class="fa fa-file-text-o fa-3x cpe rounded" aria-hidden="true"></i>
 
@@ -140,8 +140,8 @@
             <!-- END -->
 
             <!-- About Offers -->
-            <div class="row plan-overviews">
-                <div class="col col-md-4 text-center">
+            <div class="row justify-content-center plan-overviews">
+                <div class="col col-10 col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Fixed.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">FIXED RATE</h4>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-4 text-center">
+                <div class="col col-10 col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Managed.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">MANAGED RATE</h4>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-4 text-center">
+                <div class="col col-10 col-md-4 text-center">
                     <div class="overview">
                         <i class="fa offer-icon-large fa-10x" aria-hidden="true"><img src="http://cpedev2.centerpointenergyretail.com/images/offer_Index.png"></i>
                         <h4 class="margin-top-0 font-size-20 margin-top-10">INDEX RATE</h4>

@@ -52,119 +52,220 @@
 @endif
 	
 <div class="gray-bar"></div>
-<nav class="navbar navbar-default navbar-static-top">
+
+
+<!--Navigation-->
+<div class="navigation navik-header navik-mega-menu mega-menu-fullwidth header-shadow clearfix">
     <div class="container">
 
+        <!-- Header -->
+        <div class="navik-header-container">
 
+            <!--Logo-->
+            <div class="logo pl-0" data-mobile-logo="images/logo.jpg" data-sticky-logo="images/logo.jpg">
+                <a href="http://www.centerpointenergyretail.com/"><img src="images/logo.jpg" alt="CenterPoint Energy Logo"/></a>
+            </div>
 
-        <div class="navbar-header">
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            <!-- Burger menu -->
+            <div class="burger-menu">
+                <div class="line-menu line-half first-line"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu line-half last-line"></div>
+            </div>
 
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="http://www.centerpointenergyretail.com">
-                {{--{{ config('app.name', 'Laravel') }}--}}
-                <img src="images/logo.jpg">
-            </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                &nbsp;
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                @if (Auth::guest() && App::environment('staging'))
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
-                @elseif (Auth::guest() && App::environment('production'))
-                    <li><a href="http://www.centerpointenergyretail.com">HOME</a></li>
-                    <li><a href="http://www.centerpointenergyretail.com/about">ABOUT US</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            AREAS WE SERVE <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
+            <!--Navigation menu-->
+            <nav class="navik-menu menu-caret submenu-top-border">
+                <ul>
+                    <li><a href="http://www.centerpointenergyretail.com/">Home</a></li>
+                    <li><a href="http://www.centerpointenergyretail.com/about">About</a></li>
+                    <li class="mega-menu"><a href="http://www.centerpointenergyretail.com/service-areas">Service Areas</a>
+                        <ul>
                             <li>
-                                <a href="http://www.centerpointenergyretail.com/signup">
-                                    California
-                                </a>
-                                <a href="http://www.centerpointenergyretail.com/signup">
-                                    Michigan
-                                </a>
-                                <a href="http://www.centerpointenergyretail.com/nebraska">
-                                    Nebraska
-                                </a>
-                                <a href="http://www.centerpointenergyretail.com/signup">
-                                    Ohio
-                                </a>
-                                <a href="http://www.centerpointenergyretail.com/wyoming">
-                                    Wyoming
-                                </a>
+                                <div class="mega-menu-container">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mega-menu-box">
+
+                                                <ul class="mega-menu-list text-right pl-0">
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/illinois">Illinois</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/michigan">Michigan</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/ohio">Ohio</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/nebraska">Nebraska</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/wyoming">Wyoming</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-areas/california">California</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="http://www.centerpointenergyretail.com/contact">CONTACT US</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
+                    <li class="mega-menu"><a href="http://www.centerpointenergyretail.com/service-type">Service Type</a>
+                        <ul>
                             <li>
-                                <a href="{{ url('/logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
+                                <div class="mega-menu-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mega-menu-box">
 
-                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
+                                                <ul class="mega-menu-list text-right pl-0">
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-type/residential">Residential</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-type/small-business">Small Business</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-type/large-commercial">Large Commercial</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/service-type/agriculture">Agriculture</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </li>
-                @endif
-            </ul>
+                    <li><a href="http://www.centerpointenergyretail.com/plans">Plans</a></li>
+                    <li class="mega-menu"><a href="http://www.centerpointenergyretail.com/resources">Resources</a>
+                        <ul>
+                            <li>
+                                <div class="mega-menu-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mega-menu-box">
+                                                <ul class="mega-menu-list text-right pl-0">
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/resources/faqs">FAQs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/resources/energy-saving-tips">Energy Saving Tips</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/resources/moving-tips">Moving Tips</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/resources/natural-gas-explained">Natural Gas Explained</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.centerpointenergyretail.com/resources/energy-brokers">Energy Brokers</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.centerpointenergyretail.com/contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-</nav>
+</div>
+<!--END-->
 
 @yield('content')
+
+
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-<!--Frameworks-->
-{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>--}}
 
-<!--Helpers-->
-{{--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>--}}
-
-
-
-<footer>
+<!--Footer-->
+<footer class="bg--dark-gray pt-4 mt-5">
     <div class="container">
+
+        <!--Top-->
+        <div class="row mb-3">
+
+            <!--Left-->
+            <div class="col-12 col-lg-auto text-center mr-auto">
+                <ul>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/about">About</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/service-areas">Service Areas</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/service-type">Service Type</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/plans">Plans</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/resources">Resources</a>
+                    </li>
+                    <li>
+                        <a href="http://www.centerpointenergyretail.com/contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Right-->
+            <div class="col-12 col-lg-auto text-center ml-auto">
+                <a href="http://www.centerpointenergy.com" target="_blank">Corporate Website</a>
+            </div>
+
+        </div>
+        <!--END-->
+
+        <!--Bottom-->
         <div class="row">
-            <div class="col-lg-3 pull-left">
-                <p><small>Copyright © 2017 CenterPoint Energy</small></p>
+
+            <!--Left-->
+            <div class="col-12 col-lg-auto text-center mr-auto">
+                <span>Copyright &copy; 2018 CenterPoint Energy</span>
             </div>
-            <div class="col-lg-3 pull-right">
-                <a target="_blank" href="http://www.centerpointenergy.com/en-us/corporate/legal/privacy-policy">Privacy</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a target="_blank" href="http://www.centerpointenergy.com/en-us/corporate/legal/terms-of-use">Terms &amp; Conditions</a>
+            <!--END-->
+
+            <!--Right-->
+            <div class="col-12 col-lg-auto text-center ml-auto">
+                <ul>
+                    <li>
+                        <a href="https:http://www.centerpointenergy.com/en-us/corporate/legal/privacy-policy" target="_blank"><small>Privacy</small></a>
+                    </li>
+                    <li>
+                        <a href="https:http://www.centerpointenergy.com/en-us/corporate/legal/terms-of-use" target="_blank"><small>Terms &amp; Conditions</small></a>
+                    </li>
+                </ul>
             </div>
-        </div><!--end of row-->
-    </div><!--end of container-->
+            <!--END-->
+
+        </div>
+        <!--END-->
+
+    </div>
 </footer>
+<!--END-->
+
+
+
 
 
 <script src="/js/app.js"></script>

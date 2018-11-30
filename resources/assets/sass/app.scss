@@ -1,26 +1,52 @@
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import "../font-univers/univers.css";
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 
 
 @import "node_modules/font-awesome/scss/font-awesome";
 
 @import "utilities.scss";
 
+@import "navik.menu.css";
+@import "navigation";
+@import "footer";
+
+html { height: 90%; margin: 0; }
 
 body {
 
   background: $body-bg;
-  font-family: "proxima-nova", sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
+  font-family: 'Univers LT Std', sans-serif;
+  height: 90% ;
+  color: #2a2a2a;
+}
 
+
+a {
+  color: $brand-primary;
+}
+
+p {
+  font-size: 12px;
+}
+
+p.text-danger {
+  font-size: 0.875rem;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+label {
+  font-size: 0.75rem;
 }
 
 .enrollment {
@@ -33,7 +59,17 @@ body {
 .enrollment .control-label.error {
 
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: $mainRed;
+
+}
+
+i.hint {
+
+  font-size: 11px;
+  display: block;
+  margin-top: 5px;
 
 }
 
@@ -74,10 +110,7 @@ footer {
   background: #373737;
   font-size: 14px;
   color: #fff;
-  //position:absolute;
-  //bottom:0;
-  //height: 60px;
-  //width: 100%;
+
 }
 
 footer a, footer a:hover, footer a:visited{
@@ -87,7 +120,20 @@ footer a, footer a:hover, footer a:visited{
 }
 
 
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
+  width: 100%;
+  border-radius: 0px;
+  background: #f6f6f6;
+  border: 2px solid #bac0bf;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-top: 10px;
+
+}
 
 
 
@@ -279,16 +325,22 @@ footer a, footer a:hover, footer a:visited{
 
 }
 
+#show-promo-link:hover, #show-promo-link:active {
+  text-decoration: none;
+  color: #4285f4;
+
+}
+
 .enrollment .btn.btn-cpe.large {
 
   line-height: 2.4em;
-  font-size: 16px;
-  letter-spacing: 0px;
-  padding-left: 55px;
-  padding-right: 55px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-left: 75px;
+  padding-right: 75px;
   padding-top: 0px;
   padding-bottom: 0px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .enrollment .btn.btn-cpe.large.btn-add-contact {
@@ -309,6 +361,7 @@ footer a, footer a:hover, footer a:visited{
   position: absolute;
   right: 0px;
   margin-right: 10px;
+  line-height: 1.10;
 
 }
 
@@ -326,20 +379,22 @@ footer a, footer a:hover, footer a:visited{
   position: absolute;
   left: 0;
   margin-left: 10px;
+  line-height: 1.10;
 }
 
 .change-zip .fa-2x {
 
-  font-size: 1.7em;
+  font-size: 1.5em;
   position:relative;
   left: 1px;
+  top: 1px;
 }
 
 
 .fa-gas {
 
   content: '';
-  background:  #ff7900 url(https://customer.centerpointenergyretail.com/images/icon_flame.png) center center no-repeat !important;
+  background:  #0099dc url(../images/icon_flame.png) center center no-repeat !important;
   width: 70px;
   height: 70px;
   background-size: 70% !important;
@@ -349,7 +404,7 @@ footer a, footer a:hover, footer a:visited{
 .fa-utility {
 
   content: '';
-  background:  #ff7900 url(https://customer.centerpointenergyretail.com/images/icon_service.png) center center no-repeat !important;
+  background:  #0099dc url(../images/icon_service.png) center center no-repeat !important;
   width: 70px;
   height: 70px;
   background-size: 70% !important;
@@ -358,7 +413,7 @@ footer a, footer a:hover, footer a:visited{
 .fa-note {
 
   content: '';
-  background:  #ff7900 url(https://customer.centerpointenergyretail.com/images/icon_note.png) center center no-repeat !important;
+  background:  #0099dc url(../images/icon_note.png) center center no-repeat !important;
   width: 70px;
   height: 70px;
   background-size: 70% !important;
@@ -367,7 +422,7 @@ footer a, footer a:hover, footer a:visited{
 .fa-account-info {
 
   content: '';
-  background:  #ff7900 url(https://customer.centerpointenergyretail.com/images/icon_account_information.png) center center no-repeat !important;
+  background:  #0099dc url(../images/icon_account_information.png) center center no-repeat !important;
   width: 70px;
   height: 70px;
   background-size: 70% !important;
@@ -376,89 +431,18 @@ footer a, footer a:hover, footer a:visited{
 .fa-confirmation {
 
   content: '';
-  background:  #ff7900 url(https://customer.centerpointenergyretail.com/images/icon_confirmation.png) center center no-repeat !important;
+  background:  #0099dc url(../images/icon_confirmation.png) center center no-repeat !important;
   width: 70px;
   height: 70px;
   background-size: 70% !important;
 }
- 
+
 .fa img {
 
   width: 100%;
 
 }
 
-//.fa-Fixed {
-//
-//  content: '';
-//  width: 100%;
-//  margin-bottom: 5px;
-//
-//}
-//
-//.fa-Fixed img{
-//
-//  max-width: 60%;
-//
-//}
-//
-//.fa-Index {
-//
-//  content: '';
-//  width: 100%;
-//  margin-bottom: 5px;
-//}
-//
-//.fa-Index img{
-//
-//  max-width: 60%;
-//
-//}
-//
-//.fa-Managed {
-//
-//  content: '';
-//  width: 100%;
-//  margin-bottom: 5px;
-//}
-//
-//.fa-Managed img{
-//
-//  max-width: 60%;
-//
-//}
-//
-//.fa-Variable {
-//
-//  content: '';
-//  width: 100%;
-//  margin-bottom: 5px;
-//}
-//
-//.fa-Variable img{
-//
-//  max-width: 60%;
-//
-//}
-//
-//
-//.fa-account {
-//
-//  content: '';
-//  width: 100%;
-//}
-//
-//.fa-contact {
-//
-//  content: '';
-//  width: 100%;
-//}
-//
-//.fa-plan {
-//
-//  content: '';
-//  width: 100%;
-//}
 
 
 .enrollment.offers .offers-listing a:link, .enrollment.offers .offers-listing a:hover {
@@ -520,8 +504,28 @@ footer a, footer a:hover, footer a:visited{
 
   border-top: 2px solid white;
   border-right: 1px solid #8b9594;
-  padding-top: 15px;
+  padding-top: 45px;
   padding-bottom: 15px;
+}
+
+.enrollment.offers .rate-align {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .enrollment.offers .table > tbody > tr > td {
+    padding-top: 15px;
+
+  }
+
+  .enrollment.offers .table > tbody > tr > td > row.text-center {
+    text-align: left !important;
+
+  }
+
+  .enrollment.offers .rate-align {
+    text-align: left;
+  }
 }
 
 .enrollment.offers .table > tbody > tr > td:last-child {
@@ -556,10 +560,13 @@ footer a, footer a:hover, footer a:visited{
 
 
 
+
 .enrollment .btn-primary {
 
   background: $brand-primary;
   border-color: $brand-primary;
+  font-family: 'Univers LT Pro', sans-serif;
+  font-weight: 300 !important;
 
 }
 
@@ -580,17 +587,24 @@ footer a, footer a:hover, footer a:visited{
 
   color: $text-color-secondary;
 
+
 }
 
 .offer-icon img {
 
-  width: 100%;
+  max-width: 100%;
+
+}
+
+.table .offer-icon img {
+
+  width: auto;
 
 }
 
 .fa.offer-icon-large img{
 
-  width: 70%;
+  width: 100%;
   margin-bottom: 5px;
 
 }
@@ -642,7 +656,7 @@ hr {
 
 .enrollment .btn.btn-cpe {
 
-  border-radius: 25px;
+  border-radius: 6px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 3px;
@@ -652,11 +666,8 @@ hr {
 }
 
 .enrollment .btn.change-zip {
-  border-radius: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  border-radius: 6px;
+  padding: 3px 15px;
   font-weight: 600;
   border: none;
 }
@@ -715,16 +726,14 @@ hr {
 
 }
 
-
+.breadcrumb {
+  background-color: transparent !important;
+}
 
 .enrollment .breadcrumb .col {
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4e4e4+0,939393+100 */
-  background: #e4e4e4; /* Old browsers */
-  background: -moz-linear-gradient(top,  #e4e4e4 0%, #939393 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #e4e4e4 0%,#939393 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #e4e4e4 0%,#939393 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#939393',GradientType=0 ); /* IE6-9 */
+  background: #e6e6e6; /* Old browsers */
 
   color: #464749;
   text-transform: uppercase;
@@ -733,6 +742,16 @@ hr {
   font-weight: 600;
   padding-top: 10px;
   padding-bottom: 10px;
+
+}
+
+.enrollment .breadcrumb .col.past {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4e4e4+0,939393+100 */
+  background: #8cc3e1; /* Old browsers */
+
+  color: white;
+
 
 }
 
@@ -751,8 +770,8 @@ hr {
 
 .enrollment .breadcrumb .bordered {
 
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
 
 }
 
@@ -771,16 +790,21 @@ hr {
   border: 1px solid $text-color-secondary;
   border-radius: 20px;
   color: $text-color-secondary;
-  padding: 4px 12px;
+  padding: 4px 8px;
   letter-spacing: 0px;
 }
 
 
 .enrollment .form-control {
 
-
+  color: $black;
 
 }
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 12px);
+}
+
 .enrollment input[type="text"], .enrollment input[type="text"]:focus, .enrollment input[type="text"]:disabled{
 
   border-radius: 0px;
@@ -800,6 +824,7 @@ hr {
 
 }
 
+
 .enrollment input[type="text"]:disabled{
 
   line-height: 26px;
@@ -809,15 +834,7 @@ hr {
 .enrollment input[name="account_name"], .enrollment input[name="account_name"]:focus {
 
   background-image: url(../images/input_account_name_icon.png);
-  background-position: 1% 50%;
-  background-repeat: no-repeat;
-  padding-left: 37px;
-}
-
-.enrollment input[name="account_number"], .enrollment input[name="account_number"]:focus {
-
-  background-image: url(../images/input_account_number_icon.png);
-  background-position: 3% 50%;
+  background-position: 2% 50%;
   background-repeat: no-repeat;
   padding-left: 37px;
 }
@@ -835,7 +852,7 @@ hr {
   background-image: url(../images/input_email_icon.png);
   background-position: 2% 50%;
   background-repeat: no-repeat;
-  padding-left: 45px;
+  padding-left: 37px;
 }
 
 .enrollment input[name="phone"], .enrollment input[name="phone"]:focus {
@@ -873,7 +890,7 @@ hr {
 .enrollment input[name="address_street"], .enrollment input[name="mailing_street"], .enrollment input[name="address_zip"] {
 
   background-image: url(../images/input_location_icon.png);
-  background-position: 1% 50%;
+  background-position: 2% 50%;
   background-repeat: no-repeat;
   //padding: 20px 42px;
   padding-left: 37px;
@@ -882,16 +899,7 @@ hr {
 .enrollment input[name="address_street"]:focus, .enrollment input[name="mailing_street"]:focus, .enrollment input[name="address_zip"]:focus{
 
   background-image: url(../images/input_location_icon.png);
-  background-position: 1% 50%;
-  background-repeat: no-repeat;
-  //padding: 20px 42px;
-  padding-left: 37px;
-}
-
-.enrollment input[name="account_number"]:focus, .enrollment input[name="account_number"]:focus, .enrollment input[name="account_number"]:focus{
-
-  background-image: url(../images/input_account_number_icon.png);
-  background-position: 3% 50%;
+  background-position: 2% 50%;
   background-repeat: no-repeat;
   //padding: 20px 42px;
   padding-left: 37px;
@@ -965,6 +973,15 @@ hr {
 }
 
 
+ul.loa-list {
+  margin-top: 20px;
+}
+
+ul.loa-list li {
+  margin-bottom: 10px;
+}
+
+
 
 /* Done */
 /**********************************/
@@ -1018,6 +1035,7 @@ hr {
 
   color: black;
   line-height: 1em;
+  margin-bottom: 8px;
 
 }
 
@@ -1030,6 +1048,7 @@ hr {
 .enrollment .done-well .col label {
 
   margin-bottom: 0px;
+  font-weight: bold;
 
 }
 
@@ -1063,11 +1082,6 @@ hr {
 
 /**********************************/
 
-.enrollment.review {
-
-  font-size: 14px;
-
-}
 
 
 .enrollment.review .attributes label {
@@ -1096,24 +1110,99 @@ hr {
 
 }
 
+.enrollment.review p {
+  line-height: 1;
+}
+
+.enrollment.review h4 {
+  font-weight: bold;
+
+}
+
+.enrollment.review h4 span {
+  font-family: 'Univers LT Pro';
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.enrollment.service h4 {
+  font-weight: bold;
+
+}
+
+.enrollment.service h4 span {
+  font-family: 'Univers LT Pro';
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.enrollment.service .form-control {
+  margin-bottom: 15px;
+}
+
+.enrollment.review .form-control {
+  margin-bottom: 15px;
+}
+
 
 .enrollment.review .checkbox input[type="checkbox"] {
 
-  margin-left: -10px;
+  margin-left: 15px;
+  top: 25px;
+  position: relative;
 
 }
+
+@media (min-width: 1024px) {
+  .enrollment.review .checkbox input[type="checkbox"] {
+
+    margin-left: 0px;
+
+  }
+}
+
+.enrollment.review .checkbox.signed-checkbox input[type="checkbox"] {
+
+  margin-left: -10px;
+  position: relative;
+  top: 24px;
+
+}
+
 
 .enrollment.review .term {
 
   display: block;
-  padding-left: 20px;
+  padding-left: 40px;
 
+}
+
+.enrollment.review .term.signature {
+  font-size: 16px;
 }
 
 
 .enrollment.service {
 
-  padding-top: 2%;
+  padding-top: 6%;
+
+}
+
+.enrollment.offers {
+
+  padding-top: 6%;
+
+}
+
+.enrollment.review {
+
+  padding-top: 6%;
 
 }
 
@@ -1126,7 +1215,9 @@ hr {
   line-height: 1em;
 }
 
-
+.enrollment.done h5 {
+  margin-top: 15px;
+}
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -1152,6 +1243,7 @@ select:-webkit-autofill:focus {
   margin: 0;
   border: 2px solid #bac0bf;
   width: 100%;
+  margin-bottom: 15px;
   border-radius: 0px;
   overflow: hidden;
   background-color: transparent;
@@ -1183,35 +1275,51 @@ select:-webkit-autofill:focus {
 
 }
 
+.row.section-heading {
+  position: relative;
+}
 
-/* Meter Number Input */
-/**********************************/
+a.print-btn {
+  position: relative;
 
-.meter-number-note .col {
+  right: -10px;
+  color: #636b6f;
+}
 
-  background: #dddddd;
-  padding: 30px;
+.enrollment .heading {
+
+  text-align: center;
 
 }
 
-.meter-number-note i.fa-gas {
-
-  height: 60px;
-  width: 60px;
-
+.enrollment.done .heading {
+  text-align: center;
 }
 
-.meter-number-note .same-height .btn-cpe {
-
-  top: 30%;
-
+.collapse.in {
+  display: block;
 }
 
+.enrollment.review h4 {
+  padding-left: 38px;
+}
 
+.enrollment.review .heading h4 {
+  padding-left: 0px;
+}
+
+.enrollment.review h4 span {
+  font-family: 'Univers LT Pro';
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: -50%;
+  left: 10px;
+}
 
 @media
 only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+(min-device-width: 768px) and (max-device-width: 1023px)  {
 
   /* Force table to not be like tables anymore */
   .enrollment .table table, thead, tbody, th, td, tr {
@@ -1238,7 +1346,7 @@ only screen and (max-width: 760px),
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 0%;
+
     border-right: 0px solid #8b9594;
     text-align: center;
   }
@@ -1251,7 +1359,7 @@ only screen and (max-width: 760px),
 
   .enrollment.offers .table > tbody > tr > td .row.vertical-align {
 
-    display: block;
+    //display: block;
 
   }
 
@@ -1262,9 +1370,9 @@ only screen and (max-width: 760px),
 
   .enrollment .table td:before {
     /* Now like a table header */
-    position: relative;
+    position: absolute;
     /* Top/left values mimic padding */
-    top: 10px;
+    top: 15px;
 
     width: auto;
     padding-right: 0px;
@@ -1272,6 +1380,8 @@ only screen and (max-width: 760px),
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /*
@@ -1300,7 +1410,7 @@ only screen and (max-width: 760px),
   .offer-icon img {
 
     margin-top: 10px;
-    width: 60%;
+    width: auto;
     margin-bottom: 20px;
   }
 
@@ -1311,13 +1421,9 @@ only screen and (max-width: 760px),
 
   }
 
-  .enrollment .heading {
 
-    text-align: center;
 
-  }
-
-  .enrollment .heading i.fa { margin-bottom: 10px; }
+  .enrollment .heading i.fa { }
 
   .enrollment .heading .pull-right.text-right {
     float: none !important;
@@ -1331,6 +1437,110 @@ only screen and (max-width: 760px),
   }
   .enrollment .done-well .col {
     border-right: 0px solid #c1c1c1;
+  }
+
+
+
+}
+
+
+@media (min-width: 768px) {
+  .enrollment .breadcrumb .bordered {
+
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+  }
+
+  .enrollment .heading {
+
+    text-align: left;
+
+  }
+
+
+
+  .enrollment.review .heading {
+    text-align: left;
+  }
+
+  .enrollment.review h4.padding-top-3 {
+    padding-top: 15px !important;
+  }
+
+  .enrollment.offers .table > tbody > tr > td {
+
+    padding-top: 45px;
+
+  }
+
+  .enrollment.offers .rate-align {
+    text-align: center;
+  }
+
+  .enrollment.review .table .offer-icon {
+    text-align: center;
+  }
+
+  .enrollment.done .heading {
+    text-align: left;
+  }
+
+  .enrollment .heading .pull-right.text-right.text-md-right {
+    text-align: right !important;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .enrollment .heading {
+    text-align: left;
+  }
+
+  .offers .offer-icon {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .enrollment.offers .table > tbody > tr > td {
+    padding-top: 15px;
+  }
+
+  .enrollment.offers .rate-align {
+    text-align: left;
+  }
+
+  .offers .offer-icon {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 16.666667% !important;
+    flex: 0 0 16.666667% !important;
+    max-width: 16.666667% !important;
+  }
+
+  .text-lg-center {
+    text-align: left !important;
+  }
+
+  .text-md-right {
+    text-align: right !important;
+  }
+
+  .enrollment.review .w-100 {
+    display: none;
+  }
+
+  .text-lg-left {
+    text-align: left !important;
   }
 
 }

@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-BoldCond.eot');
+    src: url('../font-univers/UniversLTPro-BoldCond.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-BoldCond.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-BoldCond.woff') format('woff'),
+        url('../font-univers/UniversLTPro-BoldCond.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-45Light.eot');
+    src: url('../font-univers/UniversLTPro-45Light.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-45Light.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-45Light.woff') format('woff'),
+        url('../font-univers/UniversLTPro-45Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-55Oblique.eot');
+    src: url('../font-univers/UniversLTPro-55Oblique.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-55Oblique.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-55Oblique.woff') format('woff'),
+        url('../font-univers/UniversLTPro-55Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-Obl.eot');
+    src: url('../font-univers/UniversLTStd-Obl.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-Obl.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-Obl.woff') format('woff'),
+        url('../font-univers/UniversLTStd-Obl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-45LightOblique.eot');
+    src: url('../font-univers/UniversLTPro-45LightOblique.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-45LightOblique.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-45LightOblique.woff') format('woff'),
+        url('../font-univers/UniversLTPro-45LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-Light.eot');
+    src: url('../font-univers/UniversLTStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-Light.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-Light.woff') format('woff'),
+        url('../font-univers/UniversLTStd-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-BoldCn.eot');
+    src: url('../font-univers/UniversLTStd-BoldCn.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-BoldCn.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-BoldCn.woff') format('woff'),
+        url('../font-univers/UniversLTStd-BoldCn.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-BoldCondObl.eot');
+    src: url('../font-univers/UniversLTPro-BoldCondObl.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-BoldCondObl.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-BoldCondObl.woff') format('woff'),
+        url('../font-univers/UniversLTPro-BoldCondObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-55Roman.eot');
+    src: url('../font-univers/UniversLTPro-55Roman.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-55Roman.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-55Roman.woff') format('woff'),
+        url('../font-univers/UniversLTPro-55Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-BoldCnObl.eot');
+    src: url('../font-univers/UniversLTStd-BoldCnObl.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-BoldCnObl.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-BoldCnObl.woff') format('woff'),
+        url('../font-univers/UniversLTStd-BoldCnObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Univers LT Pro';
+    src: url('../font-univers/UniversLTPro-65Bold.eot');
+    src: url('../font-univers/UniversLTPro-65Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTPro-65Bold.woff2') format('woff2'),
+        url('../font-univers/UniversLTPro-65Bold.woff') format('woff'),
+        url('../font-univers/UniversLTPro-65Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-Bold.eot');
+    src: url('../font-univers/UniversLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-Bold.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-Bold.woff') format('woff'),
+        url('../font-univers/UniversLTStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd.eot');
+    src: url('../font-univers/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd.woff') format('woff'),
+        url('../font-univers/UniversLTStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers LT Std';
+    src: url('../font-univers/UniversLTStd-LightObl.eot');
+    src: url('../font-univers/UniversLTStd-LightObl.eot?#iefix') format('embedded-opentype'),
+        url('../font-univers/UniversLTStd-LightObl.woff2') format('woff2'),
+        url('../font-univers/UniversLTStd-LightObl.woff') format('woff'),
+        url('../font-univers/UniversLTStd-LightObl.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+

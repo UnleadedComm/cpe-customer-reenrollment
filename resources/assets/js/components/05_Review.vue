@@ -5,18 +5,18 @@
 
             <!-- Offer Heading -->
             <div class="row margin-bottom-10 heading">
-                <div class="col-md-1 text-center">
+                <div class="col-md-2 col-xl-1 text-center">
 
                     <i class="fa fa-gas fa-3x cpe rounded" aria-hidden="true"></i>
 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-7 col-lg-7 col-xl-8 pl-md-0 pl-xl-3">
                     <h4 class="margin-top-0 font-size-20">PLAN REVIEW</h4>
                     <p class="font-size-14">Great, we’re almost done. Here are all the details of your plan and account. Please review and complete the electronic signature to complete re-enrollment.</p>
                 </div>
 
-                <div class="col-md-4 pull-right text-right">
+                <div class="col-md-3 pull-right text-right text-md-right">
                     <p class="text-uppercase font-size-12 font-weight-300 orange">OFFER FOR ACCOUNT NUMBER: <span class="black display-block font-weight-600">{{ customer.account_number }}</span></p>
                     <p class="font-size-12 font-weight-600"><a href="http://www.centerpointenergyretail.com/contact">Need Help?</a></p>
                 </div>
@@ -41,9 +41,10 @@
                         <!-- Offer -->
                         <tr data-toggle="collapse" data-target=".demo1" class="accordion-toggle">
                             <td class="text-left">
-                                <div class="row vertical-align">
-                                    <i class="fa fa-4x col-md-3 col-md-offset-1 offer-icon" aria-hidden="true"><img v-bind:src="'http://cpedev2.centerpointenergyretail.com/images/offer_' + offer.price_type + '.png'"></i>
-                                    <div class="col-md-8">
+                                <div class="row justify-content-center vertical-align">
+                                    <i class="fa fa-4x col-auto col-md-10 col-md-offset-1 offer-icon" aria-hidden="true"><img v-bind:src="'http://cpedev2.centerpointenergyretail.com/images/offer_' + offer.price_type + '.png'"></i>
+                                    <div class="w-100"></div>
+                                    <div class="col-10 col-md-auto col-lg-9 text-center text-lg-left">
                                         <h5 class="font-size-14 margin-top-0 margin-bottom-5 font-weight-600">{{ offer.name }}</h5>
                                     </div>
                                 </div>
@@ -109,7 +110,7 @@
             <!-- Section Heading -->
             <div class="row section-heading margin-top-40 margin-bottom-20">
                 <div class="col-md-6">
-                    <h4 class="font-size-20 text-uppercase display-inline"><span class="badge font-size-20 display-inline">1</span> Account Information</h4>
+                    <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">1</span> Account Information</h4>
                 </div>
             </div>
             <!-- END -->
@@ -137,7 +138,7 @@
             <!-- Section Heading -->
             <div class="row section-heading margin-top-40 margin-bottom-30">
                 <div class="col-md-6">
-                    <h4 class="font-size-20 text-uppercase display-inline"><span class="badge font-size-20 display-inline">2</span> Terms And Conditions</h4>
+                    <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">2</span> Terms And Conditions</h4>
                 </div>
             </div>
             <!-- END -->
@@ -164,7 +165,7 @@
             <!-- Section Heading -->
             <div class="row section-heading margin-top-40 margin-bottom-30">
                 <div class="col-md-12">
-                    <h4 class="font-size-20 text-uppercase display-inline"><span class="badge font-size-20 display-inline">3</span> VERIFICATION AND ELECTRONIC SIGNATURE</h4>
+                    <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">3</span> VERIFICATION AND ELECTRONIC SIGNATURE</h4>
                 </div>
             </div>
             <!-- END -->

@@ -2,18 +2,18 @@
 
         <div class="container enrollment">
 
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-6 col-lg-5">
 
                     <!-- Offer Heading -->
                     <div class="row margin-bottom-10 heading">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-lg-3 mb-4">
 
                             <i class="fa fa-utility fa-3x cpe rounded" aria-hidden="true"></i>
 
                         </div>
 
-                        <div class="col-md-9">
+                        <div class="col-md-9 pl-lg-0">
                             <h4 class="margin-top-0 font-size-20">LET'S GET STARTED</h4>
                             <p class="font-size-14">
                                 Re-enrolling only takes a few minutes. First, please enter your service address ZIP code and current utility account number below (you can find this number on your bill).</p>
@@ -49,7 +49,7 @@
 
 
                         <div class="row form-group margin-top-40 margin-bottom-40">
-                            <div class="col-md-12">
+                            <div class="col-md-12 text-center">
                                 <button style="margin-bottom: 20px;" v-show="NoService" v-on:click="goHome" type="button" class="btn btn-primary btn-cpe large center-block">Home <i class="fa fa-angle-left fa-2x pull-left" aria-hidden="true"></i></button>
                                 <button v-show="!isAppLoading && !MeterNumberRequired" type="submit" class="btn btn-primary btn-cpe large center-block">Next <i class="fa fa-angle-right fa-2x pull-right" aria-hidden="true"></i></button>
                                 <button v-show="isAppLoading" type="button" class="btn btn-primary btn-cpe large center-block">Loading <i class="fa fa-circle-o-notch fa-spin pull-right" aria-hidden="true"></i></button>

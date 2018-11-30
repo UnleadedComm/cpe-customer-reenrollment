@@ -4,19 +4,19 @@
 
 
         <!-- Offer Heading -->
-        <div class="row margin-bottom-10 heading">
-            <div class="col-md-1 text-center">
+        <div class="row  margin-bottom-10 heading">
+            <div class="col-md-2 col-lg-1 text-center mb-4">
 
                 <i class="fa fa-account-info fa-3x cpe rounded" aria-hidden="true"></i>
 
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-8 pl-md-0 col-lg-9 pl-lg-4">
                 <h4 class="margin-top-0 font-size-20">ACCOUNT INFORMATION</h4>
                 <p class="font-size-14">Please verify the service information for this account. A valid phone number and email are required to complete online re-enrollment. If any information is incorrect, please call customer care at 888-200-3788 to complete your re-enrollment.</p>
             </div>
 
-            <div class="col-md-1 pull-right text-right">
+            <div class="col-md-2 pull-right text-right">
                 <p class="font-size-12 font-weight-600"><a href="http://www.centerpointenergyretail.com/contact">Need Help?</a></p>
             </div>
 
@@ -124,8 +124,8 @@
                             <div class="form-group">
                                 <label for="email">Email*</label>
                                 <input v-model="email" type="text" class="form-control" id="email" name="email" placeholder="">
-                                <span v-show="verify.$dirty && verify.email.required" class="error control-label" >Your e-mail address is required.</span>
-                                <span v-show="verify.$dirty && verify.email.email" class="error control-label" >Please provide a valid e-mail address.</span>
+                                <p v-show="verify.$dirty && verify.email.required" class="error control-label text-danger" >Your e-mail address is required.</p>
+                                <p v-show="verify.$dirty && verify.email.email" class="error control-label text-danger" >Please provide a valid e-mail address.</p>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,1340 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import "../font-univers/univers.css";
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+
+
+@import "node_modules/font-awesome/scss/font-awesome";
+
+@import "utilities.scss";
+
+@import "navik.menu.css";
+@import "navigation";
+@import "footer";
+
+body {
+
+  background: $body-bg;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+
+}
+
+.enrollment {
+
+  padding-top: $page-padding-top;
+  padding-bottom: $page-padding-top;
+
+}
+
+.enrollment .control-label.error {
+
+  display: inline-block;
+  margin-top: 10px;
+
+}
+
+.navbar-nav > li > a {
+
+  padding-top: 30px;
+  //padding-bottom: 14px;
+
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+  margin-top: 24px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #373737;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gray-bar {
+
+  display: block;
+  height: 40px;
+  background: #373737;
+
+}
+
+.navbar-default {
+  border-color: #9b9b9b;
+}
+
+footer {
+  margin: 0;
+  padding: 15px 0;
+  background: #373737;
+  font-size: 14px;
+  color: #fff;
+  //position:absolute;
+  //bottom:0;
+  //height: 60px;
+  //width: 100%;
+}
+
+footer a, footer a:hover, footer a:visited{
+
+  color: white;
+
+}
+
+
+
+
+
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+/***************************************************/
+.fadeInUp {
+
+  -webkit-animation-duration: 1.2s; /* Safari 4.0 - 8.0 */
+  animation-duration: 1.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fadeOut {
+
+  -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+  animation-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+}
+
+.fadeIn {
+
+  -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+  animation-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fadeOutDown {
+
+  -webkit-animation-duration: 1.2s; /* Safari 4.0 - 8.0 */
+  animation-duration: 1.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+/***************************************************/
+
+
+.enrollment.utility label {
+
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: $label-color;
+}
+
+.enrollment h4 {
+
+  color: $text-color-secondary;
+  letter-spacing: 1px;
+}
+
+.enrollment p.description {
+
+  font-size: 12px;
+  color: black;
+
+}
+
+.enrollment.utility form button {
+
+  margin-top: 30px;
+
+}
+
+.enrollment.utility .control-label.error {
+  display: block;
+  text-align: left;
+
+}
+
+.enrollment.offers {
+
+  padding-top: $page-padding-top-secondary;
+
+}
+
+.vertical-align {
+
+  display: flex;
+  align-items: center;
+
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enrollment .fa.cpe {
+
+  background: $text-color-secondary;
+  color: white;
+  padding: 14px 17px;
+
+}
+
+.enrollment .change-zip { border-radius: 0px; }
+
+.orange {  color: $text-color-secondary; }
+
+.black { color: black; }
+
+
+
+.btn-cpe { position: relative; }
+.btn-cpe i { line-height: 1.2; }
+.btn-cpe .badge {
+
+  border-radius: 20px;
+  padding: 0px 9px;
+  top: 0px;
+
+
+}
+
+.enrollment .btn.btn-cpe.large {
+
+  line-height: 2.4em;
+  font-size: 16px;
+  letter-spacing: 0px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 400;
+}
+
+.enrollment .btn.btn-cpe.large.btn-add-contact {
+
+  line-height: 2.4em;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 0px;
+  text-align: left;
+}
+
+.enrollment .btn.btn-cpe.large i.fa-angle-right{
+
+  position: absolute;
+  right: 0px;
+  margin-right: 10px;
+
+}
+
+.enrollment .btn.btn-cpe.large i.fa-circle-o-notch{
+
+  position: absolute;
+  right: 10px;
+  //line-height: 2.3em;
+  top: 9px;
+  margin-left: 0px;
+  letter-spacing: 0px;
+}
+
+.enrollment .btn.btn-cpe.large i.fa-angle-left{
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+}
+
+.change-zip .fa-2x {
+
+  font-size: 1.7em;
+  position:relative;
+  left: 1px;
+}
+
+
+.fa-gas {
+
+  content: '';
+  background:  #0199d8 url(../images/icon_flame.png) center center no-repeat !important;
+  width: 70px;
+  height: 70px;
+  background-size: 70% !important;
+
+}
+
+.fa-utility {
+
+  content: '';
+  background:  #0199d8 url(../images/icon_service.png) center center no-repeat !important;
+  width: 70px;
+  height: 70px;
+  background-size: 70% !important;
+}
+
+.fa-note {
+
+  content: '';
+  background:  #0199d8 url(../images/icon_note.png) center center no-repeat !important;
+  width: 70px;
+  height: 70px;
+  background-size: 70% !important;
+}
+
+.fa-account-info {
+
+  content: '';
+  background:  #0199d8 url(../images/icon_account_information.png) center center no-repeat !important;
+  width: 70px;
+  height: 70px;
+  background-size: 70% !important;
+}
+
+.fa-confirmation {
+
+  content: '';
+  background:  #0199d8 url(../images/icon_confirmation.png) center center no-repeat !important;
+  width: 70px;
+  height: 70px;
+  background-size: 70% !important;
+}
+ 
+.fa img {
+
+  width: 100%;
+
+}
+
+//.fa-Fixed {
+//
+//  content: '';
+//  width: 100%;
+//  margin-bottom: 5px;
+//
+//}
+//
+//.fa-Fixed img{
+//
+//  max-width: 60%;
+//
+//}
+//
+//.fa-Index {
+//
+//  content: '';
+//  width: 100%;
+//  margin-bottom: 5px;
+//}
+//
+//.fa-Index img{
+//
+//  max-width: 60%;
+//
+//}
+//
+//.fa-Managed {
+//
+//  content: '';
+//  width: 100%;
+//  margin-bottom: 5px;
+//}
+//
+//.fa-Managed img{
+//
+//  max-width: 60%;
+//
+//}
+//
+//.fa-Variable {
+//
+//  content: '';
+//  width: 100%;
+//  margin-bottom: 5px;
+//}
+//
+//.fa-Variable img{
+//
+//  max-width: 60%;
+//
+//}
+//
+//
+//.fa-account {
+//
+//  content: '';
+//  width: 100%;
+//}
+//
+//.fa-contact {
+//
+//  content: '';
+//  width: 100%;
+//}
+//
+//.fa-plan {
+//
+//  content: '';
+//  width: 100%;
+//}
+
+
+.enrollment.offers .offers-listing a:link, .enrollment.offers .offers-listing a:hover {
+
+  color: $brand-primary;
+  text-decoration: underline;
+}
+
+.enrollment.offers .table {
+
+  color: black;
+
+}
+
+.enrollment.offers thead {
+
+  background: $cpe-grey;
+  color: white;
+
+}
+
+.enrollment.offers thead th {
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-right: 1px solid white;
+  letter-spacing: 1px;
+
+}
+
+.enrollment.offers thead th:first-child {
+
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.enrollment.offers thead th:last-child {
+
+  border-right: 0px solid white;
+
+}
+
+.enrollment .hidden-row {
+
+  padding: 0 !important;
+  border-top: 0px solid white !important;
+
+}
+
+.enrollment.offers .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #eff0f1;
+}
+
+.enrollment.offers .table > tbody > tr > td {
+
+  border-top: 2px solid white;
+  border-right: 1px solid #8b9594;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.enrollment.offers .table > tbody > tr > td:last-child {
+
+  border-right: 0px solid #8b9594;
+
+}
+
+.enrollment.offers .table > tbody > tr > td.hidden-row {
+
+  border-right: 0px solid #8b9594;
+
+}
+
+.enrollment.offers .accordian-body p{
+
+  padding: 25px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  line-height: 1.5em;
+  margin-bottom: 0px;
+}
+
+.enrollment.offers .details ul {
+
+  list-style: none;
+  padding: 25px;
+  margin: 0px;
+
+}
+
+
+
+
+.enrollment .btn-primary {
+
+  background: $brand-primary;
+  border-color: $brand-primary;
+
+}
+
+.enrollment .accordion-toggle {
+
+  cursor: context-menu;
+}
+
+.product-name {
+
+  min-width: 360px;
+  width: 380px;
+  max-width: 380px;
+
+}
+
+.offer-icon {
+
+  color: $text-color-secondary;
+
+}
+
+.offer-icon img {
+
+  width: 100%;
+
+}
+
+.fa.offer-icon-large img{
+
+  width: 70%;
+  margin-bottom: 5px;
+
+}
+
+.enrollment.offers .offers-listing h5 {
+
+  color: $brand-primary;
+
+
+}
+
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  border: 0;
+  border-top: 2px solid #c1c1c1;
+}
+
+.enrollment.offers .offers-listing .price {
+
+  line-height: 1;
+
+}
+
+.enrollment.offers .offers-listing .unit {
+
+  color: $brand-primary;
+
+}
+
+.enrollment .unit {
+
+  color: $brand-primary;
+
+}
+
+.enrollment.offers .offers-listing .odd {
+
+  background: #f2f2f2;
+
+}
+
+.enrollment.offers .offers-listing .even {
+
+  background: #e9e9e9;
+
+}
+
+.enrollment .btn.btn-cpe {
+
+  border-radius: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: 600;
+
+}
+
+.enrollment .btn.change-zip {
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: 600;
+  border: none;
+}
+
+#change_zip {
+
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  line-height: 22px;
+  background: $body-bg;
+
+  border: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  height: 32px;
+}
+
+
+.fa-10x {
+
+  font-size: 10em;
+
+}
+
+.rounded {
+
+  border-radius: 8px;
+
+}
+
+.plan-overviews .fa {
+
+  color: $text-color-secondary;
+
+}
+
+.plan-overviews {
+
+  color: black;
+
+}
+
+.plan-overviews .col {
+
+  margin-top: 20px;
+
+
+
+}
+
+.overview {
+
+  background: #f2f2f2;
+  padding: 30px;
+
+}
+
+
+
+.enrollment .breadcrumb .col {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4e4e4+0,939393+100 */
+  background: #e4e4e4; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e4e4e4 0%, #939393 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #e4e4e4 0%,#939393 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e4e4e4 0%,#939393 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#939393',GradientType=0 ); /* IE6-9 */
+
+  color: #464749;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.enrollment .breadcrumb p{
+
+  margin-bottom: 0px;
+
+}
+
+.enrollment .breadcrumb .active {
+
+  background: $brand-primary;
+  color: white;
+
+}
+
+.enrollment .breadcrumb .bordered {
+
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+
+}
+
+.enrollment .breadcrumb .active .fa {
+
+  color: $brand-primary;
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+
+}
+
+.enrollment .section-heading .badge {
+
+  background: transparent;
+  border: 1px solid $text-color-secondary;
+  border-radius: 20px;
+  color: $text-color-secondary;
+  padding: 4px 12px;
+  letter-spacing: 0px;
+}
+
+
+.enrollment .form-control {
+
+
+
+}
+.enrollment input[type="text"], .enrollment input[type="text"]:focus, .enrollment input[type="text"]:disabled{
+
+  border-radius: 0px;
+  background: $body-bg;
+  border: 2px solid $input-border;
+  font-size: 18px;
+  //padding: 20px 12px;
+  height: 49px;
+  //line-height: 49px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.enrollment input[type="text"]:disabled{
+
+  background: #dddddd
+
+}
+
+.enrollment input[type="text"]:disabled{
+
+  line-height: 26px;
+
+}
+
+.enrollment input[name="account_name"], .enrollment input[name="account_name"]:focus {
+
+  background-image: url(../images/input_account_name_icon.png);
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="account_number"], .enrollment input[name="account_number"]:focus {
+
+  background-image: url(../images/input_account_number_icon.png);
+  background-position: 3% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="first_name"], .enrollment input[name="first_name"]:focus {
+
+  background-image: url(../images/input_account_name_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="email"], .enrollment input[name="email"]:focus  {
+
+  background-image: url(../images/input_email_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 45px;
+}
+
+.enrollment input[name="phone"], .enrollment input[name="phone"]:focus {
+
+  background-image: url(../images/input_phone_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="security_passcode"], .enrollment input[name="security_passcode"]:focus {
+
+  background-image: url(../images/input_passcode_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="security_hint"], .enrollment input[name="security_hint"]:focus {
+
+  background-image: url(../images/input_passcode_hint_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="tpv_code"], .enrollment input[name="tpv_code"]:focus {
+
+  background-image: url(../images/input_tpv_icon.png);
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  padding-left: 37px;
+}
+
+.enrollment input[name="address_street"], .enrollment input[name="mailing_street"], .enrollment input[name="address_zip"] {
+
+  background-image: url(../images/input_location_icon.png);
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+  //padding: 20px 42px;
+  padding-left: 37px;
+}
+
+.enrollment input[name="address_street"]:focus, .enrollment input[name="mailing_street"]:focus, .enrollment input[name="address_zip"]:focus{
+
+  background-image: url(../images/input_location_icon.png);
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+  //padding: 20px 42px;
+  padding-left: 37px;
+}
+
+.enrollment input[name="account_number"]:focus, .enrollment input[name="account_number"]:focus, .enrollment input[name="account_number"]:focus{
+
+  background-image: url(../images/input_account_number_icon.png);
+  background-position: 3% 50%;
+  background-repeat: no-repeat;
+  //padding: 20px 42px;
+  padding-left: 37px;
+}
+
+.enrollment form label {
+
+  color: $cpe-grey;
+  font-weight: 100;
+
+}
+
+
+.enrollment .help-block {
+
+  background: #e6e6e6;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+}
+
+.enrollment .help-block p{
+
+  margin-bottom: 0px;
+
+}
+
+
+.enrollment .contacts-list {
+
+  background: #e6e6e6;
+  //padding: 20px;
+  //border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.enrollment .contacts-list h5 {
+
+  color: $brand-primary;
+
+
+}
+
+.enrollment .contacts-list .contact {
+
+  border-right: 1px solid #c1c1c1;
+
+}
+
+.enrollment .contacts-list .attribute {
+
+  display: block;
+
+}
+
+.enrollment .contacts-list .contact {
+
+  padding-left: 30px;
+
+}
+
+.enrollment .contacts-list .contact.last {
+
+  border-right: 0px solid;
+
+}
+
+
+
+/* Done */
+/**********************************/
+
+.enrollment .done-well {
+
+  background: #e6e6e6;
+  //padding: 20px;
+  //border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0px;
+  margin-bottom: 5px;
+  border: 0px solid;
+
+}
+
+.enrollment .done-well h5 {
+
+  color: #898888;
+  text-transform: uppercase;
+
+
+}
+
+.enrollment .done-well .col {
+
+  border-right: 1px solid #c1c1c1;
+
+}
+
+.enrollment .done-well .attribute {
+
+  display: block;
+
+}
+
+.enrollment .done-well .col {
+
+  padding-left: 30px;
+
+}
+
+.enrollment .done-well .col.last {
+
+  border-right: 0px solid;
+
+}
+
+.enrollment .done-well p {
+
+  color: black;
+  line-height: 1em;
+
+}
+
+.enrollment .done-well p.unit {
+
+  color: $brand-primary;
+
+}
+
+.enrollment .done-well .col label {
+
+  margin-bottom: 0px;
+
+}
+
+.enrollment .done-well .col i{
+
+  color: $text-color-secondary;
+
+}
+
+.enrollment .done-well.even {
+
+  background: #f2f2f2;
+
+}
+
+
+.enrollment .done-well.odd {
+
+  background: #e9e9e9;
+
+}
+
+.enrollment .done-well h4 {
+
+  color: $brand-primary;
+  font-size: 14px;
+
+}
+
+
+
+/**********************************/
+
+.enrollment.review {
+
+  font-size: 14px;
+
+}
+
+
+.enrollment.review .attributes label {
+
+  color: #898888;
+
+}
+
+.enrollment.review .attributes p {
+
+  color: black;
+
+}
+
+.enrollment.review .attributes a:link {
+
+  color: $brand-primary;
+  margin-left: 5px;
+  font-size: 12px;
+
+}
+
+.enrollment.review .checkbox {
+
+  margin-bottom: 20px;
+
+}
+
+
+.enrollment.review .checkbox input[type="checkbox"] {
+
+  margin-left: -10px;
+
+}
+
+.enrollment.review .term {
+
+  display: block;
+  padding-left: 20px;
+
+}
+
+
+.enrollment.service {
+
+  padding-top: 2%;
+
+}
+
+.enrollment.done .confirmation-number .well {
+
+  background: #788381;
+  border-radius: 0px;
+  color: white;
+  padding: 15px;
+  line-height: 1em;
+}
+
+
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid black;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: inherit;
+}
+
+
+.select-style {
+  padding: 0;
+  margin: 0;
+  border: 2px solid #bac0bf;
+  width: 100%;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: transparent;
+  background: transparent url(https://cpedev.centerpointenergyretail.com/images/down_arrow.png) no-repeat 96% 50%;
+  height: 49px;
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 115%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 49px;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+
+
+.enrollment .table.offers-listing td {
+
+  vertical-align: middle;
+
+}
+
+
+/* Meter Number Input */
+/**********************************/
+
+.meter-number-note .col {
+
+  background: #dddddd;
+  padding: 30px;
+
+}
+
+.meter-number-note i.fa-gas {
+
+  height: 60px;
+  width: 60px;
+
+}
+
+.meter-number-note .same-height .btn-cpe {
+
+  top: 30%;
+
+}
+
+
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  /* Force table to not be like tables anymore */
+  .enrollment .table table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .enrollment .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .enrollment .table tr { border: 0px solid #ccc; }
+
+  .enrollment.offers .table tr.details {
+
+    margin-bottom: 20px;
+
+  }
+
+  .enrollment .table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 0%;
+    border-right: 0px solid #8b9594;
+    text-align: center;
+  }
+
+  .enrollment.offers .table > tbody > tr > td {
+
+    border-right: 0px solid #8b9594;
+
+  }
+
+  .enrollment.offers .table > tbody > tr > td .row.vertical-align {
+
+    display: block;
+
+  }
+
+  .enrollment.offers .table > tbody > tr > td.hidden-row {
+    padding: 0 !important;
+    border-top: 0px solid white !important;
+  }
+
+  .enrollment .table td:before {
+    /* Now like a table header */
+    position: relative;
+    /* Top/left values mimic padding */
+    top: 10px;
+
+    width: auto;
+    padding-right: 0px;
+    white-space: nowrap;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  /*
+  Label the data
+  */
+  //.enrollment .table td:nth-of-type(1):before { content: "FEATURED PRODUCT"; }
+  //.enrollment .table td:nth-of-type(2):before { content: "TERM"; }
+  //.enrollment .table td:nth-of-type(3):before { content: "FEATURES"; }
+  //.enrollment .table td:nth-of-type(4):before { content: "RATE"; }
+  //.enrollment .table td:nth-of-type(5):before { content: "SIGN UP"; }
+  //.enrollment .table td:nth-of-type(6):before { content: ""; }
+  //.enrollment .table td:nth-of-type(7):before { content: ""; }
+
+  .enrollment .table td.one:before { content: "FEATURED PRODUCT"; }
+  .enrollment .table td.two:before { content: "TERM"; }
+  .enrollment .table td.three:before { content: "FEATURES"; }
+  .enrollment .table td.four:before { content: "RATE"; }
+  .enrollment .table td.five:before { content: "SIGN UP"; }
+
+  .navbar-brand > img {
+
+    max-height: 130%;
+
+  }
+
+  .offer-icon img {
+
+    margin-top: 10px;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .enrollment .btn.btn-cpe.large {
+
+    padding-left: 35px;
+    padding-right: 35px;
+
+  }
+
+  .enrollment .heading {
+
+    text-align: center;
+
+  }
+
+  .enrollment .heading i.fa { margin-bottom: 10px; }
+
+  .enrollment .heading .pull-right.text-right {
+    float: none !important;
+    text-align: center !important;
+  }
+
+  .enrollment .done-well .col {
+    padding-left: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .enrollment .done-well .col {
+    border-right: 0px solid #c1c1c1;
+  }
+
+}

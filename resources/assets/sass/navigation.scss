@@ -1,0 +1,170 @@
+.navigation {
+
+/* Override */
+/*******************************/
+
+.line-menu {
+    background-color: $linkGray;
+}
+.navik-menu ul li {
+    list-style: none;
+}
+
+.navik-menu ul li.current-menu > a, .navik-menu ul li:hover > a {
+    color: $brand-primary;
+    background-color: $gray;
+}
+
+.navik-menu li > ul {
+    padding-left: 0;
+}
+
+&.navik-header .logo {
+     text-align: left;
+     padding: 15px 40px;
+ }
+
+.navik-menu ul li > a {
+
+    font-family: $universLtStd;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 400;
+
+}
+
+.burger-menu {
+
+    top: 45px;
+
+}
+
+&.navik-header.sticky {
+
+     top: 0;
+
+ }
+
+&.navik-header.sticky .navik-header-container {
+     height: 100px;
+ }
+
+&.navik-header.sticky .navik-menu {
+
+     margin-top: 30px;
+
+ }
+
+.mega-menu-container {
+
+    background: $darkerGray;
+
+}
+
+.navik-menu .mega-menu-container ul.mega-menu-list li a, .navik-menu .mega-menu-container ul.mega-menu-list li:hover a, .navik-menu.submenu-list-border .mega-menu-container ul.mega-menu-list li a, .navik-menu.submenu-list-border .mega-menu-container ul.mega-menu-list li:hover a {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.navik-menu ul.mega-menu-list li a {
+    font-size: 14px;
+    color: $black;
+
+    padding: 15px;
+}
+
+.navik-menu ul.mega-menu-list li.current-menu a {
+    font-size: 14px;
+    color: $blue;
+
+    padding: 15px;
+}
+
+
+/*******************************/
+
+
+
+    @media (min-width: 1024px) {
+
+    .navik-menu ul li {
+        list-style: none;
+        /*display: inline-block;*/
+    }
+
+    .navik-menu ul li.current-menu > a, .navik-menu ul li:hover > a {
+        background-color: transparent;
+    }
+
+    .navik-menu li > ul {
+        background-color: $navigationWhite;
+    }
+
+    .navik-menu > ul > li > a {
+        line-height: 90px;
+        padding: 20px 12px;
+    }
+
+    .navik-menu.submenu-top-border li > ul {
+        border-top: 1px solid $gray;
+        padding-top: 0px;
+    }
+
+    .navik-menu ul li.dropdown_menu > a > span:before {
+
+        transform: rotate(315deg);
+        border-width: 1px 1px 0 0;
+        border-color: black;
+        top: 2px;
+        height: 6px;
+        width: 6px;
+        margin-left: 6px;
+    }
+
+    .navik-menu ul li.dropdown_menu > a:hover > span:before {
+
+        transform: rotate(135deg);
+        top: -2px;
+
+    }
+
+    .navik-menu .mega-menu-container ul.mega-menu-list li a:hover {
+        padding-left: 0px !important;
+        color: $brand-primary;
+    }
+
+    .navik-menu .mega-menu-container ul.mega-menu-list li > a:before {
+        display: none;
+    }
+
+    .navik-menu .mega-menu-box {
+        margin-bottom: 0px;
+    }
+
+    .mega-menu-list li {
+        display: inline-block;
+    }
+
+    .navik-menu .mega-menu-container ul.mega-menu-list li a, .navik-menu .mega-menu-container ul.mega-menu-list li:hover a, .navik-menu.submenu-list-border .mega-menu-container ul.mega-menu-list li a, .navik-menu.submenu-list-border .mega-menu-container ul.mega-menu-list li:hover a {
+        padding-left: 35px !important;
+    }
+
+    .mega-menu-container {
+
+        background: transparent;
+
+    }
+
+
+}
+
+    @media (min-width: 1200px) {
+    .navik-menu > ul > li > a {
+        padding: 20px 16px;
+    }
+
+
+}
+
+
+}
