@@ -1034,7 +1034,7 @@ ul.loa-list li {
 .enrollment .done-well p {
 
   color: black;
-  line-height: 1em;
+  line-height: 1.3em;
   margin-bottom: 8px;
 
 }
@@ -1049,6 +1049,7 @@ ul.loa-list li {
 
   margin-bottom: 0px;
   font-weight: bold;
+  font-size: 0.75rem;
 
 }
 
@@ -1317,6 +1318,11 @@ a.print-btn {
   left: 10px;
 }
 
+.enrollment.review h4 span.double {
+  top: -5%;
+}
+
+
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1023px)  {
@@ -1490,6 +1496,10 @@ only screen and (max-width: 760px),
     text-align: right !important;
   }
 
+  .enrollment.review h4 span.double {
+    top: -50%;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -1507,6 +1517,10 @@ only screen and (max-width: 760px),
 
   label {
     font-size: 1rem;
+  }
+
+  .enrollment.review .text-lg-left {
+    text-align: center !important;
   }
 
 }
@@ -1543,4 +1557,11 @@ only screen and (max-width: 760px),
     text-align: left !important;
   }
 
+  .enrollment.review .text-lg-left {
+    text-align: left !important;
+  }
+
+
 }
+
+

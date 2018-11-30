@@ -5,7 +5,7 @@
 
             <div class="row">
 
-                <div class="col-md-3 pull-right text-right">
+                <div class="col-md-12 pull-right text-right">
                     <p class="font-size-12 font-weight-600"><a href="http://www.centerpointenergyretail.com/contact">Need Help?</a></p>
                 </div>
             </div>
@@ -22,13 +22,13 @@
 
             <!-- Offer Heading -->
             <div class="row margin-bottom-10 heading">
-                <div class="col-md-1">
+                <div class="col-md-2 mb-4 col-lg-1">
 
                     <i class="fa fa-confirmation fa-3x cpe rounded" aria-hidden="true"></i>
 
                 </div>
 
-                <div class="col-md-10 margin-left-10">
+                <div class="col-md-10 pl-md-0 pl-lg-4">
                     <h4 class="margin-top-0 font-size-20">CONFIRMATION</h4>
                     <p class="font-size-14">That’s it! You’re re-enrolled. Please save or print this page for your records. Thanks for once again choosing CenterPoint Energy. We look forward to serving you.</p>
 
@@ -58,14 +58,14 @@
                         <div class="row">
 
                             <!-- CONTACT -->
-                            <div class="col-md-3 col text-center">
+                            <div class="col-12 col-md-3 col text-center">
                                 <i class="fa fa-5x"><img src="http://cpedev2.centerpointenergyretail.com/images/icon_account.png"></i>
                                 <h5>Account Information</h5>
                             </div>
                             <!-- END -->
 
                             <!-- CONTACT -->
-                            <div class="col-md-5 col">
+                            <div class="col-12 col-md-5 col">
                                 <p><label>Utility: </label> {{ offer.utility_name }}</p>
                                 <p><label>Customer Type: </label> {{ offer.segment }}</p>
                                 <p><label>Account Name: </label> {{ completed_enrollment.service_locations[0].account_name }}</p>
@@ -77,7 +77,7 @@
                             <!-- END -->
 
                             <!-- CONTACT -->
-                            <div class="col-md-3 col last">
+                            <div class="col-12 col-md-3 col last">
                                 <p><label>Service Address: </label> {{ completed_enrollment.service_locations[0].address_street }}</p>
                                 <p><label>City/State/ZIP: </label> {{ completed_enrollment.service_locations[0].address_city }}, {{ completed_enrollment.service_locations[0].address_state }} {{ completed_enrollment.service_locations[0].address_zip }}</p>
                                 <p><label>Phone: </label> {{ completed_enrollment.contacts[0].phone }}</p>
@@ -104,7 +104,7 @@
                         <div class="row">
 
                             <!-- CONTACT -->
-                            <div class="col-md-3 col vcenter">
+                            <div class="col-12 col-md-3 col vcenter">
                                 <div class="display-block">
                                     <i class="fa fa-5x"><img src="http://cpedev2.centerpointenergyretail.com/images/icon_plan.png"></i>
                                     <h5>Plan Information</h5>
@@ -113,7 +113,7 @@
                             <!-- END -->
 
                             <!-- CONTACT -->
-                            <div class="col-md-3 col vcenter">
+                            <div class="col-12 col-md-3 col vcenter">
                                 <h4>{{ offer.name }}</h4>
                             </div>
                             <!-- END -->
@@ -122,7 +122,7 @@
 
                             <template v-if="offer.term_months">
                                 <!-- CONTACT -->
-                                <div class="col-md-2 col vcenter">
+                                <div class="col-12 col-md-2 col vcenter">
                                     <div class="display-block">
                                         <p class="font-size-16 font-weight-600">{{ offer.term_months }}</p>
                                         <p class="font-size-16 font-weight-600">MONTHS</p>
@@ -133,7 +133,7 @@
 
                             <template v-if="!offer.term_months">
                                 <!-- CONTACT -->
-                                <div class="col-md-2 col vcenter">
+                                <div class="col-12 col-md-2 col vcenter">
                                     <div class="display-block">
                                         <p class="font-size-16 font-weight-600">THRU</p>
                                         <p class="font-size-16 font-weight-600">{{ formatDate(offer.term_end_date) }}</p>
@@ -145,7 +145,7 @@
 
 
                             <!-- CONTACT -->
-                            <div class="col-md-2 col vcenter">
+                            <div class="col-12 col-md-2 col vcenter">
                                 <div class="display-block">
                                     <p class="font-size-16 font-weight-600 text-uppercase">{{ offer.price_type }}</p>
                                     <p class="font-size-14"><a target="_blank" v-bind:href="offer.contract_url">Download Terms</a></p>
@@ -155,7 +155,7 @@
 
 
                             <!-- CONTACT -->
-                            <div class="col-md-2 col last vcenter">
+                            <div class="col-12 col-md-2 col last vcenter">
                                 <div class="display-block">
                                 <p class="font-size-30 font-weight-600">${{ offer.latest_price }}</p>
                                 <p class="font-size-16 font-weight-300 unit">Per {{ offer.price_units }}</p>
@@ -175,13 +175,13 @@
 
             <!-- Offer Heading -->
             <div class="row margin-bottom-10 heading"> 
-                <div class="col-md-1">
+                <div class="col-md-2 mb-3 col-lg-1">
 
                     <i class="fa fa-phone fa-3x cpe rounded" aria-hidden="true"></i>
 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-10 pl-md-0 pl-lg-4">
                     <h4 class="margin-top-0 font-size-20">QUESTIONS</h4>
                     <p class="font-size-14">If you have questions about your new natural gas plan or service, please contact
                         customer service at 888-200-3788 between 7am and 7pm Central Time, Monday through Friday.</p>

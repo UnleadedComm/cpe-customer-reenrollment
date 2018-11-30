@@ -108,15 +108,15 @@
             <hr />
 
             <!-- Section Heading -->
-            <div class="row section-heading margin-top-40 margin-bottom-20">
-                <div class="col-md-6">
+            <div class="row justify-content-center justify-content-md-start section-heading margin-top-40 margin-bottom-20">
+                <div class="col-11 col-md-6">
                     <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">1</span> Account Information</h4>
                 </div>
             </div>
             <!-- END -->
 
-            <div class="row attributes margin-top-30">
-                <div class="col-md-6">
+            <div class="row justify-content-center attributes margin-top-30">
+                <div class=" col-11 col-md-6">
                     <p><label>Customer Type: </label> {{ customer.segment }} </p>
                     <p><label>Account Name: </label> {{ customer.account_name }}</p>
                     <p><label>Contact First Name: </label> {{ enrollment.contacts_attributes[0].first_name }}</p>
@@ -124,7 +124,7 @@
                     <p><label>Account Number: </label> {{ customer.account_number }}</p>
                     <p v-if="customer.meter_number"><label>Meter Number: </label> {{ customer.meter_number }}</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <p><label>Service Address: </label> {{ customer.service_street }}</p>
                     <p><label>City/State/ZIP: </label> {{ customer.service_city }}, {{ customer.service_state }} {{ customer.service_zip }}</p>
                     <p class="margin-top-20"><label>Phone: </label> {{ enrollment.contacts_attributes[0].phone }} <a class="text-uppercase" v-on:click="$router.push({ path: '/reenroll/account/information' })" href="javascript:void(0)">(Edit)</a></p>
@@ -136,8 +136,8 @@
             <hr />
 
             <!-- Section Heading -->
-            <div class="row section-heading margin-top-40 margin-bottom-30">
-                <div class="col-md-6">
+            <div class="row justify-content-center justify-content-md-start section-heading margin-top-40 margin-bottom-30">
+                <div class="col-11 col-md-6">
                     <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">2</span> Terms And Conditions</h4>
                 </div>
             </div>
@@ -163,22 +163,22 @@
             <form v-on:submit.prevent="validate">
 
             <!-- Section Heading -->
-            <div class="row section-heading margin-top-40 margin-bottom-30">
-                <div class="col-md-12">
-                    <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block">3</span> VERIFICATION AND ELECTRONIC SIGNATURE</h4>
+            <div class="row justify-content-center section-heading margin-top-40 margin-bottom-30">
+                <div class="col-11 col-md-12">
+                    <h4 class="font-size-20 text-uppercase display-block"><span class="font-size-20 display-block double">3</span> VERIFICATION AND ELECTRONIC SIGNATURE</h4>
                 </div>
             </div>
             <!-- END -->
 
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row justify-content-center justify-content-md-start">
+                <div class="col-11 col-md-4">
                     <p>Choose a 4-digit verification PIN. This PIN wlll serve as your electronic signature.</p>
                 </div>
             </div>
 
 
-            <div class="row">
-                <div class="col-md-4" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.tpv_code.$valid }">
+            <div class="row justify-content-center justify-content-md-start">
+                <div class="col-11 col-md-4" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.tpv_code.$valid }">
                     <label class="font-weight-100" for="tpv_code">Verification PIN*</label>
                     <input v-model="tpv_code" maxlength="4" type="text" class="form-control" id="tpv_code" name="tpv_code" placeholder="">
                     <span v-show="verify.$dirty && verify.tpv_code.required" class="error control-label" >Please provide a 4-digit verification PIN.</span>
@@ -189,8 +189,8 @@
                 </div>
             </div>
 
-           <div class="row">
-               <div class="col-md-12">
+           <div class="row justify-content-center">
+               <div class="col-11 col-md-11">
                    <span v-for="(error,index) in enrollment_errors" class="error control-label text-danger">
                         {{ error }}
                     </span>
@@ -198,8 +198,8 @@
            </div>
 
 
-            <div class="row form-group margin-top-40 margin-bottom-40">
-                <div class="col-md-12">
+            <div class="row justify-content-center form-group margin-top-40 margin-bottom-40">
+                <div class="col-11 col-md-12">
                     <button v-on:click="$router.push({ path: '/reenroll/offers' })" type="button" class="btn btn-primary btn-cpe large pull-left">Back <i class="fa fa-angle-left fa-2x pull-left" aria-hidden="true"></i></button>
                     <button v-show="!isAppLoading" type="submit" class="btn btn-primary btn-cpe large pull-right">Agree and Enroll <i class="fa fa-angle-right fa-2x pull-right" aria-hidden="true"></i></button>
                     <button v-show="isAppLoading" type="button" class="btn btn-primary btn-cpe large pull-right">Loading <i class="fa fa-circle-o-notch fa-spin pull-right" aria-hidden="true"></i></button>
