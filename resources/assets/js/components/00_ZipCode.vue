@@ -36,6 +36,7 @@
                             <!--<span v-show="verify.service_zip.minLength" class="error control-label" >Must be 5 characters.</span>-->
                             <span v-show="NoService" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the account number and ZIP code provided.</span>
                             <span v-show="NotResidential" class="error text-danger control-label">This account cannot be re-enrolled online at this time.  Please contact a service representative toll-free at <b>1-888-200-3788</b>.</span>
+                            <span v-show="IsCalifornia" class="error text-danger control-label" style="margin-top: 10px;">Online re-enrollment for this account is not available at this time. Please call our customer care team at 888-200-3788 for assistance.</span>
                         </div>
 
                         <div class="form-group" v-bind:class="{ 'has-error' : verify.$dirty&&!verify.service_zip.$valid }">
@@ -86,6 +87,7 @@
                                 <span v-show="NoMeterProvided" class="error text-danger control-label">Please provide a valid meter number.</span>
                                 <span v-show="NoMeter" class="error text-danger control-label">Thank you for your inquiry. It appears we could not find the meter number you provided.</span>
                                 <span v-show="NotResidential" class="error text-danger control-label">This account cannot be re-enrolled online at this time.  Please contact a service representative toll-free at <b>1-888-200-3788</b>.</span>
+
 
                             </div>
                         </div>
@@ -154,13 +156,22 @@
                             console.log(results);
                             console.log(results.length);
 
-                            _self.$store.commit('updateCustomer', results);
+                            var currentState = results[0].service_state;
 
-                            setTimeout(function () {
+                            if(currentState != 'CA') {
+
+                                _self.$store.commit('updateCustomer', results);
+
+                                setTimeout(function () {
+                                    _self.appLoading(false);
+                                    _self.$router.push({path: '/reenroll/account/information'});
+
+                                }, 1000);
+
+                            } else {
                                 _self.appLoading(false);
-                                _self.$router.push({path: '/reenroll/account/information'});
-
-                            }, 1000);
+                                this.IsCalifornia = true;
+                            }
 
                         }
 
@@ -379,7 +390,8 @@
                 NoMeter: false,
                 MeterNumberRequired: false,
                 NoMeterProvided: false,
-                NotResidential: false
+                NotResidential: false,
+                IsCalifornia: false
             }
         },
         watch: {
