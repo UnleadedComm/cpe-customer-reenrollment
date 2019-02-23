@@ -271,7 +271,35 @@
 <script src="/js/app.js"></script>
 
 
+<script>
+    var versaTag = {};
+    versaTag.id = "10131";
+    versaTag.sync = 0;
+    versaTag.dispType = "js";
+    versaTag.ptcl = "HTTPS";
+    versaTag.bsUrl = "bs.serving-sys.com/BurstingPipe";
+    versaTag.activityParams = {
 
+        "OrderID":"","Session":"","Value":"","productid":"","productinfo":"","Quantity":""
+
+    };
+
+    versaTag.retargetParams = {};
+    versaTag.dynamicRetargetParams = {};
+    versaTag.conditionalParams = {};
+</script>
+<script id="ebOneTagUrlId" src="https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js"></script>
+<noscript>
+    <iframe src="https://bs.serving-sys.com/BurstingPipe?
+cn=ot&amp;
+onetagid=10131&amp;
+ns=1&amp;
+activityValues=$$Value=[Value]&amp;OrderID=[OrderID]&amp;Session=[Session]&amp;ProductID=[ProductID]&amp;ProductInfo=[ProductInfo]&amp;Quantity=[Quantity]$$&amp;
+retargetingValues=$$$$&amp;
+dynamicRetargetingValues=$$$$&amp;
+acp=$$$$&amp;"
+            style="display:none;width:0px;height:0px"></iframe>
+</noscript>
 
 
 
