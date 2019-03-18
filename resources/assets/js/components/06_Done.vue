@@ -264,6 +264,19 @@
         },
         mounted: function(){
             //this.$store.commit('resetState');
+
+            window.dataLayer.push({
+                'event': 'reenrollmentConversion',
+                'order_number': this.completed_enrollment.order_number,
+                'utility_name': this.offer.utility_name,
+                'segment': this.completed_enrollment.segment,
+                'account_number': this.completed_enrollment.service_locations[0].account_number,
+                'address_zip': this.completed_enrollment.service_locations[0].address_zip,
+                'plan_name': this.offer.name,
+                'term_months': this.offer.term_months,
+                'latest_price': this.offer.latest_price
+            });
+
         }
 
     }
