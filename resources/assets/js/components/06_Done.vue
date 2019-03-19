@@ -229,6 +229,22 @@
             },
             goHome(){
                 this.$router.push({ path: '/reenroll' });
+            },
+            dcmConversion() {
+                window.dataLayer.push({
+                    'event': 'dcmConversion',
+                    'order_number': this.completed_enrollment.order_number,
+                    'term_months': this.offer.term_months,
+                    'latest_price': this.offer.latest_price,
+                    'segment': this.completed_enrollment.segment,
+                    'account_number': this.completed_enrollment.service_locations[0].account_number,
+                    'confirmation_code': this.offer.pool_code,
+                    'plan_name': this.offer.name,
+                    'product_id': this.offer.id,
+                    'utility_name': this.offer.utility_name,
+                    'pod_number': this.pod_number,
+                    'address_zip': this.completed_enrollment.service_locations[0].address_zip
+                });
             }
 
         },
@@ -276,6 +292,9 @@
                 'term_months': this.offer.term_months,
                 'latest_price': this.offer.latest_price
             });
+
+            this.dcmConversion();
+
 
         }
 
