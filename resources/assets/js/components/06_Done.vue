@@ -243,7 +243,9 @@
                     'product_id': this.offer.id,
                     'utility_name': this.offer.utility_name,
                     'pod_number': this.pod_number,
-                    'address_zip': this.completed_enrollment.service_locations[0].address_zip
+                    'address_zip': this.completed_enrollment.service_locations[0].address_zip,
+                    'address_city': this.completed_enrollment.service_locations[0].address_city,
+                    'address_state': this.completed_enrollment.service_locations[0].address_state
                 });
             }
 
