@@ -48,6 +48,20 @@
                             <!--<span v-show="NoService" class="error text-danger control-label">Thank you for your inquiry. It appears we currently do not have any offers in your area.</span>-->
                         </div>
 
+                        <div class="row form-grou p margin-top-25 margin-bottom-40">
+                            <div class="col-md-12">
+                                <div class="collapse" id="collapsePromo">
+                                    <div class="form-group">
+
+                                        <label class="font-size-12">Promo Code</label>
+                                        <input v-model="promocode" maxlength="20" type="text" class="form-control" id="promo-code" name="promoCode" placeholder="">
+
+                                    </div>
+                                </div>
+                                <a id="show-promo-link" role="button" data-toggle="collapse" href="#collapsePromo" aria-expanded="false" aria-controls="collapseExample">Add promo code</a>
+                            </div>
+                        </div>
+
 
                         <div class="row form-group margin-top-40 margin-bottom-40">
                             <div class="col-md-12 text-center">
@@ -91,6 +105,8 @@
 
                             </div>
                         </div>
+
+
 
                         <div class="col-md-6 same-height">
                             <button v-on:click="validateMeterNumber" v-show="!isAppLoading" type="submit" class="btn btn-primary btn-cpe large center-block">Submit <i class="fa fa-angle-right fa-2x pull-right" aria-hidden="true"></i></button>
@@ -161,6 +177,7 @@
                             if(currentState != 'CA') {
 
                                 _self.$store.commit('updateCustomer', results);
+                                _self.$store.commit('updatePromoCode', this.promocode);
 
                                 setTimeout(function () {
                                     _self.appLoading(false);
@@ -236,6 +253,7 @@
                                 console.log(results.length);
 
                                 _self.$store.commit('updateCustomer', results);
+                                _self.$store.commit('updatePromoCode', this.promocode);
 
                                 setTimeout(function () {
                                     _self.appLoading(false);
@@ -391,7 +409,8 @@
                 MeterNumberRequired: false,
                 NoMeterProvided: false,
                 NotResidential: false,
-                IsCalifornia: false
+                IsCalifornia: false,
+                promocode: ''
             }
         },
         watch: {
@@ -418,6 +437,7 @@
         },
         mounted: function(){
             this.loaded = true;
+            var _self = this;
 
             if(this.$route.params.zip) {
                 this.service_zip = this.$route.params.zip;
@@ -429,6 +449,33 @@
                 }, 1000);
             }
 
+            if(this.$route.params.promocode) {
+                this.promocode = this.$route.params.promocode;
+                var _self = this;
+
+
+                this.$store.commit('updatePromoCode', this.promocode);
+                setTimeout(function(){
+                    _self.validateFromRetail();
+                }, 1000);
+            }
+
+
+            $('#show-promo-link').click(function(){
+                console.log('click');
+
+
+                setTimeout(function(){
+                    if($('#collapsePromo').hasClass('in')){
+                        $('#show-promo-link').text('Remove promo code');
+
+                    } else {
+                        $('#show-promo-link').text('Add promo code');
+                        _self.promocode = '';
+                    }
+                    $.fn.matchHeight._update();
+                }, 400);
+            });
 
         }
 

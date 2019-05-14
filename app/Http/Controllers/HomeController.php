@@ -79,6 +79,7 @@ class HomeController extends Controller
     }
 
 
+
     /**
      * Validate Meter Number.
      *
@@ -167,6 +168,55 @@ class HomeController extends Controller
 
 
     }
+
+
+    /**
+     * Get Products for Customer by Id.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function CustomerProductsPromo($zip, $segment, $utility_id, $promocode)
+    {
+
+        try {
+
+            if($segment == "Residential"){
+                $segment = "R";
+            } else {
+                $segment = "S";
+            }
+
+            //CPE Choice API Call
+            $client = new \GuzzleHttp\Client(['headers' => ['Authorization' => 'Token token='.env('APP_CPE_API_TOKEN')], 'base_uri' => env('APP_CPE_API_URL')]);
+            $response = $client->request('GET', 'utilities/'.$utility_id.'/products', ['http_errors' => false, 'query' => ['zip'=>$zip, 'customer'=>'existing', 'segment' => $segment, 'promo' => $promocode]]);
+            $statuscode = $response->getStatusCode();
+
+
+            $content = \GuzzleHttp\json_decode($response->getBody()->getContents());
+            $header = array(
+                'Content-Type' => 'application/json; charset=UTF-8',
+                'charset' => 'utf-8'
+            );
+
+
+            return response()->json($content, $statuscode, $header, JSON_UNESCAPED_UNICODE);
+
+
+
+        } catch (\Exception $e){
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
 
 
     /**

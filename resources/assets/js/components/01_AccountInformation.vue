@@ -194,7 +194,7 @@
                         var ContactsAttributes = {first_name: this.first_name, last_name: this.last_name, email: this.email, phone: this.phone};
                         this.$store.commit('updateContactsAttributes', ContactsAttributes);
 
-                        Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id).then((response) => {
+                        Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id + '/' + this.getPromoCode).then((response) => {
 
                             var results = response.json();
 
@@ -228,6 +228,9 @@
         computed: {
             isAppLoading(){
                 return this.$store.getters.isAppLoading
+            },
+            getPromoCode(state) {
+                return this.$store.getters.getPromoCode
             }
         },
         data(){
@@ -249,7 +252,8 @@
                 phone: '',
                 email: '',
                 selected_offer_id: null,
-                enrollment: ''
+                enrollment: '',
+                promocode: ''
             }
         },
         created: function(){
@@ -291,6 +295,11 @@
 
 
             window.scrollTo(0, 0);
+
+        },
+        mounted: function(){
+
+            this.promocode = this.getPromoCode;
 
         },
         watch: {

@@ -31,6 +31,7 @@ export default new Vuex.Store({
             "segment": '',
             "url": ''
         },
+        promocode: '',
         app_is_loading: false,
         available_offers: [],
         selected_offer_id: null, 
@@ -64,6 +65,9 @@ export default new Vuex.Store({
         updateCompletedEnrollment(state, completed_enrollment){
 
             state.completed_enrollment = completed_enrollment;
+        },
+        updatePromoCode(state, promoCode){
+            state.promocode = promoCode;
         }
     },
     getters: {
@@ -93,6 +97,9 @@ export default new Vuex.Store({
         },
         getCompletedEnrollment(state){
             return state.completed_enrollment;
+        },
+        getPromoCode(state){
+            return state.promocode;
         }
     }
 });
