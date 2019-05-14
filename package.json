@@ -7,7 +7,7 @@
   "devDependencies": {
     "babel-plugin-proxy": "^1.1.0",
     "babel-preset-react": "^6.24.1",
-    "bootstrap-sass": "^3.4.0",
+    "bootstrap-sass": "^3.4.1",
     "css-loader": "^0.25.0",
     "gulp": "^3.9.1",
     "harmony-reflect": "^1.6.1",
@@ -19,7 +19,7 @@
   "dependencies": {
     "easiest-js-validator": "^1.0.8",
     "font-awesome": "^4.6.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "jquery-masked-input": "^0.1.2",
     "jquery-match-height": "^0.7.2",
     "lodash": "^4.17.11",
