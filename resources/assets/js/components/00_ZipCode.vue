@@ -460,6 +460,20 @@
                 }, 1000);
             }
 
+            if(this.$route.params.promo) {
+
+                this.promocode = this.$route.params.promo;
+                var _self = this;
+
+
+                this.$store.commit('updatePromoCode', this.promocode);
+
+                $('#collapsePromo').collapse('show');
+                $('#show-promo-link').text('Remove promo code');
+
+
+            }
+
 
             $('#show-promo-link').click(function(){
                 console.log('click');
