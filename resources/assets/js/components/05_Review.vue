@@ -245,6 +245,16 @@
                     });
                     /******************************************************/
 
+                    /* Check For Promo */
+                    /******************************************************/
+                    var availableOffers = this.$store.getters.getAvailableOffers;
+                    var selectedOfferId = this.$store.getters.getSelectedPlanId;
+                    var selectedOffer = _.find(availableOffers, { 'id' : selectedOfferId });
+                    if(selectedOffer.promotion_id) {
+                        adjustedEnrollment.promotion_id = selectedOffer.promotion_id;
+                    }
+                    /******************************************************/
+
 
                     Vue.http.post('/reenroll/complete', { enrollment: adjustedEnrollment }).then((response) => {
                         console.log(response.data);
