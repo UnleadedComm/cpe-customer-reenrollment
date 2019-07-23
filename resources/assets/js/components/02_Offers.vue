@@ -23,6 +23,14 @@
             </div>
             <!-- END -->
 
+            <!--Invalid Promo-->
+            <div v-show="invalid_promo_code" class="row">
+                <div class="col-md-12">
+                    <p class="text-danger control-label margin-top-10" >Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam.</p>
+                </div>
+            </div>
+            <!--END-->
+
             <!-- Offers -->
             <div class="row">
                 <div class="col-md-12">
@@ -246,12 +254,14 @@
         data(){
             return {
                 offers: this.$store.getters.getOffers,
-                customer: ''
+                customer: '',
+                invalid_promo_code: false
             }
         },
         created: function(){
 
             this.customer = this.$store.getters.getCurrentCustomer;
+            this.invalid_promo_code = this.$store.getters.getPromoCodeStatus;
 
             $(function(){
                 $('.overview').matchHeight();

@@ -247,11 +247,8 @@
 
                     /* Check For Promo */
                     /******************************************************/
-                    var availableOffers = this.$store.getters.getAvailableOffers;
-                    var selectedOfferId = this.$store.getters.getSelectedPlanId;
-                    var selectedOffer = _.find(availableOffers, { 'id' : selectedOfferId });
-                    if(selectedOffer.promotion_id) {
-                        adjustedEnrollment.promotion_id = selectedOffer.promotion_id;
+                    if(this.promo_code) {
+                        adjustedEnrollment.promo_code = this.promo_code;
                     }
                     /******************************************************/
 
@@ -296,7 +293,8 @@
                 enrollment: {},
                 offer: {},
                 enrollment_errors: [],
-                customer: {}
+                customer: {},
+                promo_code: ''
             }
         },
         created: function(){
@@ -319,7 +317,7 @@
 
             this.enrollment.account_number = this.customer.account_number;
 
-
+            this.promo_code = this.$store.getters.getPromoCode;
 
             //Validation Rules
             var rules = {

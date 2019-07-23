@@ -4,7 +4,7 @@ export default new Vuex.Store({
         enrollment:
         {
             "product_id": '',
-            "promotion_id": '',
+            "promo_code": '',
             "enrollment_type": "renewal",
             "channel": "web",
             "vendor": "CenterPoint",
@@ -32,6 +32,7 @@ export default new Vuex.Store({
             "url": ''
         },
         promocode: '',
+        invalid_promo_code: false,
         app_is_loading: false,
         available_offers: [],
         selected_offer_id: null, 
@@ -68,6 +69,9 @@ export default new Vuex.Store({
         },
         updatePromoCode(state, promoCode){
             state.promocode = promoCode;
+        },
+        updatePromoCodeStatus(state, status){
+            state.invalid_promo_code = status;
         }
     },
     getters: {
@@ -100,6 +104,9 @@ export default new Vuex.Store({
         },
         getPromoCode(state){
             return state.promocode;
+        },
+        getPromoCodeStatus(state) {
+            return state.invalid_promo_code;
         }
     }
 });

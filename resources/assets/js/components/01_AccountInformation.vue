@@ -197,16 +197,24 @@
                         Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id + '/' + this.getPromoCode).then((response) => {
 
                             var results = response.json();
+                            this.offer_count = response.json().length;
 
-                        console.log(results);
+                            console.log(results);
 
-                        _self.$store.commit('updateOffers', results);
+                            if(this.offer_count == 0 && this.promocode) {
 
-                        setTimeout(function () {
-                            _self.appLoading(false);
-                            _self.$router.push({path: '/reenroll/offers'});
-                        }, 1200);
+                                this.getDefaultOffers();
 
+                            } else {
+
+                                _self.$store.commit('updateOffers', results);
+
+                                setTimeout(function () {
+                                    _self.appLoading(false);
+                                    _self.$router.push({path: '/reenroll/offers'});
+                                }, 1200);
+
+                            }
 
                         },(response) =>
                         {
@@ -219,6 +227,34 @@
 
                 }
 
+            },
+            getDefaultOffers() {
+
+                var _self = this;
+
+                Vue.http.get('/reenroll/products/' + this.customer.service_zip + '/' + this.customer.segment + '/' + this.customer.utility_id).then((response) => {
+
+                    var results = response.json();
+                    this.offer_count = response.json().length;
+
+                    console.log(results);
+
+                    _self.$store.commit('updateOffers', results);
+                    _self.$store.commit('updatePromoCodeStatus', true);
+                    _self.$store.commit('updatePromoCode', '');
+
+                    setTimeout(function () {
+                        _self.appLoading(false);
+                        _self.$router.push({path: '/reenroll/offers'});
+                    }, 1200);
+
+
+
+                },(response) =>
+                {
+
+
+                });
             },
             appLoading(isLoading){
                 this.$store.commit('updateAppIsLoading', isLoading);
@@ -253,7 +289,8 @@
                 email: '',
                 selected_offer_id: null,
                 enrollment: '',
-                promocode: ''
+                promocode: '',
+                offer_count: ''
             }
         },
         created: function(){
