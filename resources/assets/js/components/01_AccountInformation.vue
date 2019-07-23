@@ -165,6 +165,7 @@
         methods: {
             validate(e){
 
+                this.$store.commit('updatePromoCodeStatus', false);
 
                 if(this.selected_offer_id != null){
                     var _self = this;0

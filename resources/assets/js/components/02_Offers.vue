@@ -26,7 +26,7 @@
             <!--Invalid Promo-->
             <div v-show="invalid_promo_code" class="row">
                 <div class="col-md-12">
-                    <p class="text-danger control-label margin-top-10" >Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam.</p>
+                    <p class="text-danger control-label margin-top-10" >The promo code you entered is invalid or has expired. If you need assistance, please call <a href="tel:8882003788">888-200-3788</a>.</p>
                 </div>
             </div>
             <!--END-->
