@@ -116,64 +116,44 @@
 }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -182,7 +162,6 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none;
 }
 
@@ -4382,46 +4361,17 @@ blockquote .blockquote-footer {
 * SPINNER
 */
 .util-spin {
-  -webkit-animation: fa-spin 1s infinite linear;
   animation: fa-spin 1s infinite linear;
 }
 
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
 .util-spin-delayed {
-  -webkit-animation: fa-spin-delayed 4s infinite ease-in-out;
   animation: fa-spin-delayed 4s infinite ease-in-out;
 }
 
 .util-spin-delayed-pseudo:before,
 .util-spin-delayed-pseudo:after {
   display: inline-block;
-  -webkit-animation: fa-spin-delayed 3s infinite ease-in-out;
   animation: fa-spin-delayed 3s infinite ease-in-out;
-}
-
-@-webkit-keyframes fa-spin-delayed {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 
 .navigation {
@@ -4516,7 +4466,6 @@ blockquote .blockquote-footer {
     padding-top: 0px;
   }
   .navigation .navik-menu ul li.dropdown_menu > a > span:before {
-    -webkit-transform: rotate(315deg);
     transform: rotate(315deg);
     border-width: 1px 1px 0 0;
     border-color: black;
@@ -4526,7 +4475,6 @@ blockquote .blockquote-footer {
     margin-left: 6px;
   }
   .navigation .navik-menu ul li.dropdown_menu > a:hover > span:before {
-    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
     top: -2px;
   }
@@ -4610,7 +4558,6 @@ footer ul li a:after {
   background: white;
   right: -3px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -4721,81 +4668,46 @@ textarea {
 /* durations and timing functions.              */
 /***************************************************/
 .fadeInUp {
-  -webkit-animation-duration: 1.2s;
   /* Safari 4.0 - 8.0 */
   animation-duration: 1.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   /* ease (default) */
 }
 
 .fadeOut {
-  -webkit-animation-duration: 0.4s;
   /* Safari 4.0 - 8.0 */
   animation-duration: 0.4s;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   /* ease (default) */
 }
 
 .fadeIn {
-  -webkit-animation-duration: 0.4s;
   /* Safari 4.0 - 8.0 */
   animation-duration: 0.4s;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   /* ease (default) */
 }
 
 .fadeOutDown {
-  -webkit-animation-duration: 1.2s;
   /* Safari 4.0 - 8.0 */
   animation-duration: 1.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   /* ease (default) */
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
     transform: translate3d(0, 30%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeOutDown {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0);
-  }
 }
 
 @keyframes fadeOutDown {
@@ -4804,13 +4716,11 @@ textarea {
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
     transform: translate3d(0, 30%, 0);
   }
 }
 
 .fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
 }
 
@@ -4846,18 +4756,13 @@ textarea {
 }
 
 .vertical-align {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
 }
 
 .vcenter {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
 }
 
@@ -5170,7 +5075,6 @@ hr {
   line-height: 22px;
   background: #f6f6f6;
   border: solid 2px #c9c9c9;
-  -webkit-transition: border 0.3s;
   transition: border 0.3s;
   height: 32px;
 }
@@ -5582,7 +5486,6 @@ select:-webkit-autofill:focus {
   border: 1px solid black;
   -webkit-text-fill-color: black;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: inherit;
 }
@@ -5708,7 +5611,6 @@ a.print-btn {
     margin: 0 auto;
     margin-bottom: 15px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   /*
@@ -5794,7 +5696,6 @@ a.print-btn {
     text-align: left;
   }
   .offers .offer-icon {
-    -webkit-box-flex: 0 !important;
     flex: 0 0 100% !important;
     max-width: 100% !important;
   }
@@ -5814,7 +5715,6 @@ a.print-btn {
     text-align: left;
   }
   .offers .offer-icon {
-    -webkit-box-flex: 0 !important;
     flex: 0 0 16.666667% !important;
     max-width: 16.666667% !important;
   }
